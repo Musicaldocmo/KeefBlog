@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonmarg - Keef Tour And Travels</title>
+    <link rel="stylesheet" href="son.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html"> Keef Tour and Travels </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>Explore Sonmarg - The Meadow of Gold</h1>
+        <p>Experience the breathtaking landscapes, stunning glaciers, and exciting activities that Sonmarg has to offer throughout the year.</p>
+        <button class="discover-btn" onclick="displayAttractions()">Discover More</button>
+    </section>
+    <!-- Attractions Section -->
+    <div id="attractions" class="attractions" style="display: none;">
+    <h2>Top Attractions in Sonmarg</h2>
+    <ul id="attractions-list"></ul>
+    </div>
+    <!-- Glaciers Section -->
+    <section class="glaciers-section">
+        <h2>Famous Glaciers</h2>
+        <p>Sonmarg is home to some majestic glaciers, ideal for trekking and exploration.</p>
+        <div class="glacier-cards">
+            <div class="glacier-card">
+                <h3>Thajiwas Glacier</h3>
+                <p>One of the most popular glaciers in Sonmarg, offering incredible views and adventure-filled treks.</p>
+            </div>
+            <div class="glacier-card">
+                <h3>Zero Point Glacier</h3>
+                <p>At the highest point of Zoji La Pass, Zero Point offers a surreal icy landscape even in summer.</p>
+            </div>
+        </div>
+    </section>
+
+   <!-- Zero Point & Union Cab Section -->
+<section class="zero-point-section">
+    <h2 class="reveal-text">Zero Point and Union Cab Rides</h2>
+    <p class="reveal-text">Explore the famous Zero Point through the local Union Cab services, which offer a scenic drive through the snow-clad mountains.</p>
+
+    <!-- Image Slider -->
+    <div class="image-slider">
+        <img src="s1.jpg" alt="Scenic Cab Ride" class="slider-image">
+        <img src="snmarg.jpg" alt="Snow-Clad Mountains" class="slider-image">
+        <img src="sonmargsecnic.jpg" alt="Union Cab" class="slider-image">
+    </div>
+
+    <div class="union-cab-info reveal-text">
+        <p>Cab services to Zero Point are managed by the local Union, ensuring a safe and comfortable journey through breathtaking landscapes.</p>
+        <ul style="list-style-type:none;">
+            <li>Cab fare: Approx. ₹3000 - ₹4000 (Sedan)</li>
+            <li>Duration: 3 hours (round trip)</li>
+        </ul>
+    </div>
+</section>
+    <!-- Fish Point & Gateway of Ladakh Section -->
+    <section class="gateway-ladakh-section">
+        <h2>Fish Point & Gateway of Ladakh</h2>
+        <div class="gateway-content">
+            <div class="fish-point">
+                <h3>Fish Point</h3>
+                <p>Sonmarg’s Fish Point is perfect for relaxing by the river and indulging in delicious local trout.</p>
+            </div>
+            <div class="gateway-ladakh">
+                <h3>Gateway to Ladakh</h3>
+                <p>Located at Zoji La, Sonmarg serves as the gateway to Ladakh, with its stunning views and historical significance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seasonal Attractions Section -->
+    <section class="seasons-section">
+        <h2>Sonmarg in Summer & Winter</h2>
+        <p>Each season brings its own beauty and activities to Sonmarg.</p>
+        <div class="seasons-cards">
+            <div class="season-card summer">
+                <h3>Summer Season</h3>
+                <p>In summer, Sonmarg is a lush meadow, perfect for picnics, treks, and camping under clear blue skies.</p>
+            </div>
+            <div class="season-card winter">
+                <h3>Winter Season</h3>
+                <p>In winter, Sonmarg transforms into a snowy paradise with opportunities for snowboarding, skiing, and ice skating.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Krishnasar and Vishansar Lakes Section -->
+    <section class="lakes-section">
+        <h2>Krishnasar and Vishansar Lakes</h2>
+        <p>These twin high-altitude lakes are famous for their stunning beauty and trekking trails. Surrounded by lush greenery in summer, the lakes offer pristine landscapes, making them a favorite for photographers and nature lovers alike.</p>
+        <div class="lake-info">
+            <img src="vrlake.jpg" alt="Vishansar Lake" class="lake-image">
+            <p><strong>Trekking:</strong> The trek to these lakes is moderately challenging and provides breathtaking views of the surrounding mountains and meadows.</p>
+            <p><strong>Activities:</strong> Fishing, camping, and photography are popular activities around these lakes.</p>
+            <img src="krlake.jpg" alt="Krishnasar Lake" class="lake-image">
+
+        </div>
+    </section>
+
+    <!-- Baltal Section -->
+    <section class="baltal-section">
+        <h2>Baltal: The Gateway to Amarnath Yatra</h2>
+        <p>Baltal, located just 15 km from Sonmarg, is famous for being the base camp for the annual Amarnath Yatra. It also offers camping options and panoramic views of the Himalayan range.</p>
+        <div class="baltal-activities">
+            <h3>Activities at Baltal</h3>
+            <ul>
+                <li>Trekking to Amarnath Cave</li>
+                <li>Camping by the Sind River</li>
+                <li>Horse riding</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Places to Eat Section -->
+    <section class="places-to-eat-section">
+        <h2>Places to Eat in Sonmarg</h2>
+        <p>Satisfy your cravings at some of the best eateries in Sonmarg.</p>
+        <div class="eatery-cards">
+            <div class="eatery-card">
+                <h3>Snowland Restaurant</h3>
+                <p>Famous for its Kashmiri cuisine and breathtaking views of the surrounding mountains.</p>
+            </div>
+            <div class="eatery-card">
+                <h3>Sonmarg Canteen</h3>
+                <p>A cozy spot offering a variety of local dishes, including traditional Wazwan meals.</p>
+            </div>
+        </div>
+    </section>
+
+   <!-- Activities Section -->
+<section class="activities-section">
+    <h2>Things to Do in Sonmarg</h2>
+    <p>Sonmarg offers a variety of outdoor activities for adventure enthusiasts and nature lovers alike.</p>
+    <div class="activities-cards">
+        <div class="activity-card">
+            <div class="card-content">
+                <div class="front">
+                    <h3>Trekking</h3>
+                    <p>Sonmarg is a trekker’s paradise with scenic routes leading to glaciers and high-altitude lakes.</p>
+                </div>
+                <div class="back">
+                    <h3>Trekking</h3>
+                    <p>Details about trekking opportunities.</p>
+                </div>
+            </div>
+        </div>
+        <div class="activity-card">
+            <div class="card-content">
+                <div class="front">
+                    <h3>Fishing</h3>
+                    <p>Try your hand at fishing in the pristine rivers, which are home to trout and other local fish.</p>
+                </div>
+                <div class="back">
+                    <h3>Fishing</h3>
+                    <p>Information on fishing spots and tips.</p>
+                </div>
+            </div>
+        </div>
+        <div class="activity-card">
+            <div class="card-content">
+                <div class="front">
+                    <h3>Camping</h3>
+                    <p>Experience the beauty of nature by camping in the meadows and by the rivers in Sonmarg.</p>
+                </div>
+                <div class="back">
+                    <h3>Camping</h3>
+                    <p>Guidelines for camping in Sonmarg.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-info">
+            <p>&copy; 2024 Keef Tour And Travels | All Rights Reserved</p>
+            <p>Rambagh, Payeen Srinagar, Jammu & Kashmir</p>
+            <p>Email: info.keeftravels@gmail.com | Phone: +91-8825058040</p>
+        </div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </footer>
+    <button id="backToTop" class="back-to-top">↑ Up</button>
+    <script src="son.js"></script>
+</body>
+
+</html>

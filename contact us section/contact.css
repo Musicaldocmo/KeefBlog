@@ -1,0 +1,572 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #f0f0f0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Responsive Navbar */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0a2e5c;
+    padding: 1rem;
+}
+
+header nav .logo a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header nav .logo a:hover {
+    color: #f0a500;
+    text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    background-color: rgba(240, 165, 0, 0.7);
+    color: #fff;
+    backdrop-filter: blur(4px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Hero Section */
+.hero-contact {
+    background: conic-gradient(at top, #eede0479, #18191af6, #fa3504);
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-contact h1 {
+    font-size: 3rem;
+    animation: fadeIn 2s ease forwards;
+}
+
+.hero-contact p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    animation: fadeIn 2s ease forwards 0.5s;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Contact Info Section */
+.contact-info {
+    background: #ffffff;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Modified to ensure responsiveness */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* Ensure items wrap */
+}
+
+.info-item {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-item i {
+    font-size: 2rem;
+    color: #0a2e5c;
+    margin-bottom: 10px;
+}
+
+.info-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.info-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.info-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Contact Form Section */
+/* .contact-form-section {
+    padding: 2rem;
+    text-align: center;
+    background-color: rgba(10, 46, 92, 0.8);
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+.contact-form-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-form-section form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 1rem;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.submit-btn {
+    background-color: #f0a500;
+    border: none;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #e69900;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+} */
+/* Contact Form Section Styling */
+.contact-form-section {
+    padding: 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #0a2e5c, #f0a500); /* Stylish gradient */
+    color: #ffffff;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Form */
+.contact-form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem; /* Gap between form fields */
+}
+
+/* Form Groups */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-group label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #333;
+    background: #ffffff;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    resize: vertical;
+    transition: box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Submit Button */
+.submit-btn {
+    background: #f0a500;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    background: #e69900;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Adjustments */
+
+/* Tablets (1024px and below) */
+@media (max-width: 1024px) {
+    .contact-form-section {
+        padding: 1.5rem;
+    }
+    .contact-form-section h2 {
+        font-size: 1.8rem;
+    }
+    .submit-btn {
+        font-size: 0.9rem;
+        padding: 0.7rem 1.2rem;
+    }
+}
+
+/* Small Tablets (768px and below) */
+@media (max-width: 768px) {
+    .contact-form-section {
+        padding: 1rem;
+    }
+    .contact-form-section h2 {
+        font-size: 1.6rem;
+    }
+    .form-group label {
+        font-size: 0.9rem;
+    }
+    .submit-btn {
+        font-size: 0.85rem;
+        padding: 0.6rem 1rem;
+    }
+}
+
+/* Mobile Phones (480px and below) */
+@media (max-width: 480px) {
+    .contact-form-section {
+        padding: 0.8rem;
+    }
+    .contact-form-section h2 {
+        font-size: 1.5rem;
+    }
+    .form-group input,
+    .form-group textarea {
+        padding: 0.6rem;
+    }
+    .submit-btn {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.8rem;
+    }
+}
+
+/* Extra Small Screens (300px and below) */
+@media (max-width: 300px) {
+    .contact-form-section {
+        padding: 0.6rem;
+    }
+    .contact-form-section h2 {
+        font-size: 1.3rem;
+    }
+    .form-group label {
+        font-size: 0.8rem;
+    }
+    .submit-btn {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.7rem;
+    }
+}
+
+/* Map Section */
+.map-section {
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    margin-top: 2rem;
+}
+
+.map-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.map-container {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Footer */
+footer {
+    background-color: #0a2e5c;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 1rem;
+    animation: fadeIn 2s ease-in;
+}
+
+/* Responsiveness */
+
+/* Responsive Styles for UL and LI between 800px and 480px */
+@media (max-width: 800px) and (min-width: 480px) {
+    nav {
+        overflow: hidden; /* Prevent horizontal scroll */
+    }
+
+    nav ul {
+        display: flex; /* Use flex to keep items in a row */
+        flex-wrap: nowrap; /* Prevent wrapping to the next line */
+        justify-content: space-around; /* Distribute space evenly */
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
+        max-width: 100%; /* Ensure ul does not exceed navbar width */
+        box-sizing: border-box; /* Include padding and border in width calculations */
+    }
+
+    nav ul li {
+        flex: 1; /* Allow items to grow and shrink equally */
+        margin: 0; /* Remove margin between items */
+    }
+
+    nav ul li a {
+        display: block; /* Make the link fill the list item */
+        text-align: center; /* Center text in the link */
+        padding: 10px; /* Add padding for clickable area */
+        font-size: 16px; /* Adjust font size for readability */
+        white-space: nowrap; /* Prevent text from wrapping */
+    }
+}
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+    .hero-contact h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-contact p {
+        font-size: 1rem;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr; /* Stack items */
+    }
+
+   
+}
+
+/* Mobile Phones (480px and below) */
+@media (max-width: 480px) {
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav .logo a {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0;
+        padding: 0.5rem 0;
+        width: 100%;
+    }
+
+    nav ul li a {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.2rem;
+        text-align: left;
+    }
+
+    .hero-contact h1 {
+        font-size: 2rem;
+    }
+
+    .hero-contact p {
+        font-size: 0.9rem;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+    .map-container {
+        height: 250px;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}
+/* Extra Small Screens (300px and below) */
+@media (max-width: 300px) {
+    .info-item {
+        padding: 0.8rem; /* Reduce padding for smaller screens */
+        margin: 0.5rem 0;
+    }
+
+    .info-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .info-item p {
+        font-size: 0.8rem;
+    }
+
+    .map-container {
+        height: 200px; /* Reduce map height for small screens */
+    }
+
+    nav ul li a {
+        font-size: 1rem; /* Reduce navbar link font size */
+    }
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    background-color: #ff9800; /* Background color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding */
+    font-size: 18px; /* Font size */
+    cursor: pointer; /* Cursor style */
+    display: none; /* Initially hidden */
+    z-index: 1000; /* On top of other elements */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Responsive Font Size and Positioning */
+@media (max-width: 1024px) {
+    .back-to-top {
+        bottom: 15px; /* Adjust position */
+        right: 15px; /* Adjust position */
+    }
+}
+
+@media (max-width: 768px) {
+    .back-to-top {
+        font-size: 16px; /* Smaller font size for smaller screens */
+        padding: 8px 12px; /* Reduced padding */
+        bottom: 10px; /* Adjust position */
+        right: 10px; /* Adjust position */
+    }
+}
+
+@media (max-width: 480px) {
+    .back-to-top {
+        font-size: 14px; /* Smaller font size for mobile screens */
+        padding: 6px 10px; /* Reduced padding */
+        bottom: 5px; /* Adjust position */
+        right: 5px; /* Adjust position */
+    }
+}
+
+.back-to-top:hover {
+    background-color: #f13e07; /* Darker background on hover */
+    transform: scale(1.1);
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+/* CSS for the loading spinner  if you dont want alert */
+.loading-spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid #ffffff;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

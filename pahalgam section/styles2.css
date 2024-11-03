@@ -1,0 +1,679 @@
+/* General Resets and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links li a {
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+    color: #FFD700;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 4px;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background: url('pahalgam-hero.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-section .hero-content {
+    z-index: 1;
+    color: #fff;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: #FFD700;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #fff;
+    color: #333;
+}
+/* Video Modal Styles */
+.video-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s; /* Fade-in animation */
+}
+
+.video-modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+}
+
+.video-modal iframe {
+    width: 100%;
+    height: 450px; /* Default height */
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s; /* Scale transition */
+}
+
+.video-modal iframe:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover {
+    color: #FFD700; /* Change color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .video-modal iframe {
+        height: 400px; /* Adjusted height for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .video-modal iframe {
+        height: 300px; /* Adjusted height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .video-modal iframe {
+        height: 200px; /* Adjusted height for smaller screens */
+    }
+}
+
+/* Activities Section */
+.activities-section {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.activities-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.activities-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.activity-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.activity-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.activity-card h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.activity-card p {
+    margin-top: 10px;
+}
+
+.activity-card:hover {
+    transform: scale(1.05);
+}
+
+/* Tourist Attractions Section */
+.attractions-section {
+    padding: 50px 20px;
+    background-color: #eaeaea;
+    text-align: center;
+}
+
+.attractions-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.attractions-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.attraction-card {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.attraction-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.attraction-card h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.attraction-card p {
+    margin-top: 10px;
+}
+
+/* Local Culture Section */
+.culture-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+.culture-section p{
+    font-size: 1rem ;
+    padding-bottom: 13px;
+}
+.culture-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.culture-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.culture-item {
+    max-width: 300px;
+}
+
+.culture-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.culture-item h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #FFD700;
+    color: #333;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #fff;
+}
+
+/* Footer Section */
+.footer-section {
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.back-to-top {
+    margin-top: 10px;
+}
+
+.back-to-top a {
+    color: #FFD700;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .navbar .nav-links {
+        flex-direction: row;
+    }
+    .navbar .nav-links li a {
+        
+       
+        white-space: nowrap; /* Prevent text from breaking into a new line */
+    }
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .cta-button {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .cta-button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    .activities-grid, .attractions-grid, .culture-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .activity-card, .attraction-card, .culture-item {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .nav-links {
+        display: none;
+        
+    }
+    .nav-links.active {
+        display: flex; /* Show the links when 'active' class is added */
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    .menu-toggle span {
+        background-color: #fff;
+    }
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+    .cta-button {
+        padding: 8px 14px;
+        font-size: 0.8rem;
+    }
+    .form-group input, .form-group textarea {
+        font-size: 0.9rem;
+    }
+}
+/* Travel Tips Section */
+.travel-tips-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.travel-tips-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+.travel-tips-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    animation: fadeInUp 0.6s ease-in-out;
+}
+
+.tips-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tip-card {
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.7s ease-in-out;
+}
+
+.tip-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.tip-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.tip-card p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.tip-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .travel-tips-section h2 {
+        font-size: 2rem;
+    }
+
+    .tips-grid {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 768px) {
+    .travel-tips-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .tip-card {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .travel-tips-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .tips-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tip-card {
+        max-width: 100%;
+    }
+}
+/* Adventure Awaits Section */
+.adventure-section {
+    background-color: #f7f7f7;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.adventure-section h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.adventure-section p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.adventure-section h2:hover {
+    color: #008CBA; /* Slight hover effect on title */
+}
+
+/* Adventure Cards Layout */
+.adventure-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Adventure Card Styling */
+.adventure-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.adventure-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.adventure-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensure images maintain their aspect ratio */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Headings in Cards */
+.adventure-card h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Paragraphs in Cards */
+.adventure-card p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .adventure-section h2 {
+        font-size: 2em;
+    }
+
+    .adventure-section p {
+        font-size: 1.1em;
+    }
+
+    .adventure-card {
+        width: 250px;
+    }
+
+    .adventure-card img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .adventure-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .adventure-card {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+
+    .adventure-card img {
+        height: 170px;
+    }
+}
+
+@media (max-width: 480px) {
+    .adventure-section h2 {
+        font-size: 1.8em;
+    }
+
+    .adventure-section p {
+        font-size: 1em;
+        padding: 0 10px;
+    }
+
+    .adventure-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .adventure-card img {
+        height: 150px;
+    }
+
+    .adventure-card h3 {
+        font-size: 1.3em;
+    }
+
+    .adventure-card p {
+        font-size: 0.9em;
+    }
+}

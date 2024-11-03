@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Keef Tour And Travels</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="contact.html">Keef Tour And Travels</a> <!-- Correct the  to link to index.html later -->
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-contact">
+        <div class="hero-content">
+            <h1>Contact Us</h1>
+            <p>We’re here to help you plan your dream vacation! Reach out to us via any method below.</p>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="contact-info">
+        <div class="info-container">
+            <div class="info-item">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Phone</h3>
+                <p>+91-8825058040</p>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>info.keeftravels@gmail.com</p>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Address</h3>
+                <p>Rambagh, Payeen Srinagar, Jammu & Kashmir</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <h2>Send Us a Message</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message & Phone</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <h2>Find Us Here</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.6728855642673!2d74.80283767492854!3d34.052261217730695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e18fc4f6d99167%3A0x919d2b0188f61e7f!2sKeef%20Tour%20And%20Travels!5e0!3m2!1sen!2sin!4v1729491925753!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Keef Tour And Travels. All rights reserved.</p>
+    </footer>
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top">↑ ON TOP</button>
+
+    <script src="contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dal Lake - Keef Tour And Travels</title>
+    <link rel="stylesheet" href="dAL.CSS">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Keef Tour And Travels</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="dal-lake.html" class="active">Dal Lake</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section for Dal Lake -->
+    <section class="hero">
+        <h1>Explore the Beauty of Dal Lake</h1>
+        <p>Dal Lake is the jewel of Srinagar, offering scenic views, houseboats, Mughal Gardens, and a glimpse into the
+            local culture.</p>
+        <button class="discover-more">Discover More</button>
+    </section>
+    <!-- Additional Hidden Content -->
+<section class="additional-content" id="additionalContent" >
+    <h2>More About Dal Lake</h2>
+    <p>Dal Lake is not just a lake, but a cultural hub. It has been an important part of Kashmiri life for centuries, offering a glimpse into the local way of life with its houseboats, Shikara rides, and floating gardens.</p>
+    <p>The surrounding Mughal Gardens, built in the 16th century, are a testament to the area's historical significance. Visitors can enjoy the peaceful serenity, explore the nearby markets, and experience the rich cultural heritage of Kashmir.</p>
+    <p>Don't miss the chance to witness the captivating sunrise and sunset views over Dal Lake, reflecting the majestic Himalayan peaks in its tranquil waters.</p>
+</section>
+
+  
+   <!-- Mughal Gardens Section -->
+<section class="mughal-gardens">
+    <h2>The Iconic Mughal Gardens</h2>
+
+    <!-- Shalimar Garden Section -->
+    <div class="garden-section">
+        <h3>Shalimar Bagh</h3>
+        <p>Shalimar Bagh is one of the largest Mughal gardens in Srinagar, known for its beautifully landscaped greenery, fountains, and architecture.</p>
+        <div class="image-carousel-container" id="shalimar-carousel">
+            <button class="carousel-btn left-btn" onclick="moveCarousel('shalimar-carousel',-1)">&#10094;</button>
+            <div class="image-carousel">
+                <img src="Mughal.jpg" alt="Shalimar Garden Image 1">
+                <img src="shalimar2.jpg" alt="Shalimar Garden Image 2">
+                <img src="Shallu.jpg" alt="Shalimar Garden Image 3">
+            </div>
+            <button class="carousel-btn right-btn" onclick="moveCarousel('shalimar-carousel', 1)">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- Nishat Garden Section -->
+    <div class="garden-section">
+        <h3>Nishat Bagh</h3>
+        <p>Famous for its terraces and stunning view of Dal Lake, Nishat Bagh offers an exceptional experience of Mughal-era gardening.</p>
+        <div class="image-carousel-container" id="nishat-carousel">
+            <button class="carousel-btn left-btn" onclick="moveCarousel('nishat-carousel', -1)">&#10094;</button>
+            <div class="image-carousel">
+                <img src="Nishat1.jpg" alt="Nishat Garden Image 1">
+                <img src="nishat2.jpg" alt="Nishat Garden Image 2">
+                <img src="Nishat3.jpg" alt="Nishat Garden Image 3">
+            </div>
+            <button class="carousel-btn right-btn" onclick="moveCarousel('nishat-carousel', 1)">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- Tulip Garden Section -->
+    <div class="garden-section">
+        <h3>Tulip Garden</h3>
+        <p>Indira Gandhi Memorial Tulip Garden is the largest in Asia, and it blooms with thousands of tulips in different colors every spring.</p>
+        <div class="image-carousel-container" id="tulip-carousel">
+            <button class="carousel-btn left-btn" onclick="moveCarousel('tulip-carousel', -1)">&#10094;</button>
+            <div class="image-carousel">
+                <img src="Tulip1.jpg" alt="Tulip Garden Image 1">
+                <img src="Tulip2.jpg" alt="Tulip Garden Image 2">
+                <img src="tulip3.jpg" alt="Tulip Garden Image 3">
+            </div>
+            <button class="carousel-btn right-btn" onclick="moveCarousel('tulip-carousel', 1)">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- Pari Mahal Section -->
+    <div class="garden-section">
+        <h3>Pari Mahal</h3>
+        <p>Perched on Zabarwan mountain, Pari Mahal, meaning 'The Palace of Fairies,' offers a stunning view of Dal Lake.</p>
+        <div class="image-carousel-container" id="pari-carousel">
+            <button class="carousel-btn left-btn" onclick="moveCarousel('pari-carousel', -1)">&#10094;</button>
+            <div class="image-carousel">
+                <img src="Parimahal.jpg" alt="Pari Mahal Image 1">
+                <img src="pari2.jpg" alt="Pari Mahal Image 2">
+                <img src="pari3.jpg" alt="Pari Mahal Image 3">
+            </div>
+            <button class="carousel-btn right-btn" onclick="moveCarousel('pari-carousel', 1)">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- Chashme Shahi Section -->
+    <div class="garden-section">
+        <h3>Chashme Shahi</h3>
+        <p>Chashme Shahi, meaning 'The Royal Spring,' is a small, yet beautiful Mughal garden with natural water springs.</p>
+        <div class="image-carousel-container" id="chashme-carousel">
+            <button class="carousel-btn left-btn" onclick="moveCarousel('chashme-carousel', -1)">&#10094;</button>
+            <div class="image-carousel">
+                <img src="cs.jpg" alt="Chashme Shahi Image 1">
+                <img src="cs2.jpg" alt="Chashme Shahi Image 2">
+                <img src="cs3.jpg" alt="Chashme Shahi Image 3">
+            </div>
+            <button class="carousel-btn right-btn" onclick="moveCarousel('chashme-carousel', 1)">&#10095;</button>
+        </div>
+    </div>
+</section>
+
+  <!-- Boulevard Road Section -->
+  <section class="boulevard-road">
+    <h2>Explore Boulevard Road</h2>
+    <p>The Boulevard Road along Dal Lake is perfect for enjoying long walks, delicious barbeques, and local street
+        food. It’s a vibrant area full of restaurants, cafés, and street vendors.</p>
+    <div class="places-to-eat">
+        <h3>Where to Eat</h3>
+        <div class="eat-cards">
+            <div class="eat-card">
+                <h4>Barbeque Nation</h4>
+                <p>Delicious grilled food with a stunning view of Dal Lake.</p>
+            </div>
+            <div class="eat-card">
+                <h4>Shawarma Street</h4>
+                <p>Famous for its Middle Eastern delicacies, especially shawarmas.</p>
+            </div>
+            <div class="eat-card">
+                <h4>Grill House</h4>
+                <p>Local barbecue dishes with a Mughlai twist.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Shopping in Srinagar Section -->
+<section class="shopping-srinagar">
+    <h2>Shopping in Srinagar</h2>
+    <p>Discover the local markets in Srinagar, famous for Kashmiri handicrafts, pashmina shawls, carpets, and much
+        more. A must-visit is the Lal Chowk area for an authentic shopping experience.</p>
+    <div class="shopping-places">
+        <div class="shopping-card">
+            <h4>Lal Chowk</h4>
+            <p>The heart of Srinagar’s shopping scene, offering traditional Kashmiri crafts, clothes, and food.</p>
+        </div>
+        <div class="shopping-card">
+            <h4>Polo View Market</h4>
+            <p>Known for its exclusive pashmina shawls and local handicrafts.</p>
+        </div>
+        <div class="shopping-card">
+            <h4>Residency Road</h4>
+            <p>Popular for dry fruits, spices, and Kashmiri tea (Kehwa).</p>
+        </div>
+    </div>
+</section>
+<!-- Local Eating Places Section -->
+<section class="local-eating-places">
+    <h2>Must-Try Eating Places</h2>
+    <p>Savor the authentic flavors of Kashmir at these popular dining spots.</p>
+    <div class="eating-cards">
+        <div class="eating-card">
+            <h4>Ahdoos</h4>
+            <p>A historic restaurant known for its authentic Kashmiri dishes.</p>
+        </div>
+        <div class="eating-card">
+            <h4>Shamyana Restaurant</h4>
+            <p>Offers a beautiful view of Dal Lake along with delicious food.</p>
+        </div>
+        <div class="eating-card">
+            <h4>Krishna Vaishno Dhaba</h4>
+            <p>Popular for its vegetarian options and traditional meals.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Activities in and Around Dal Lake Section -->
+<section class="dal-lake-activities">
+    <h2>Activities Around Dal Lake</h2>
+    <p>Dal Lake offers numerous activities, from houseboat stays to Shikara rides, birdwatching, and exploring the
+        floating gardens.</p>
+    <div class="activities-cards">
+        <div class="activity-card">
+            <h4>Shikara Ride</h4>
+            <p>Experience the beauty of Dal Lake with a peaceful Shikara ride across the water.</p>
+        </div>
+        <div class="activity-card">
+            <h4>Houseboat Stay</h4>
+            <p>Spend a night in one of the famous houseboats, a unique experience offering luxury and tranquility.
+            </p>
+        </div>
+        <div class="activity-card">
+            <h4>Floating Gardens</h4>
+            <p>Explore the unique floating gardens on Dal Lake like Nehru-Park,Zabarwan-Park, known for their beauty and the local farming
+                techniques.</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p class="footer-copyright">© 2024 Keef Tour And Travels. All rights reserved.</p>
+
+    </footer>
+    <button id="backToTop" class="back-to-top">↑</button>
+    <script src="DAL.JS"></script>
+</body>
+
+</html>
