@@ -1,0 +1,1678 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    width: 100%;
+    color: gold;
+    box-sizing: border-box;
+}
+.logo a{
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    white-space: nowrap; /* Prevents logo from breaking into multiple lines for larger screens */
+
+}
+.logo a:hover{
+    color: darkgoldenrod;
+}
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem; /* Space between links */
+    flex-wrap: nowrap; /* Prevent wrapping of links */
+}
+.nav-links li {
+    margin-left: 2rem;
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+.nav-links a {
+    color: gold;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.4s ease;
+}
+
+.nav-links a:hover {
+    color: #ffdd00;
+    text-shadow: 10px 10px 10px #ffdd00;
+}
+/* For larger screens (1024px and above) */
+@media (min-width: 1024px) {
+    .navbar {
+        padding: 1rem 2rem;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+}
+
+/* For screens 768px to 1024px */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .navbar {
+        padding: 0.8rem 1.5rem;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+    }
+
+    .nav-links {
+        gap: 0.8rem; /* Adjust space between links */
+    }
+}
+
+/* For screens 480px to 768px */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.6rem 1rem;
+    }
+
+    .nav-links {
+        gap: 0.5rem; /* Adjust gap to avoid hidden links */
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+
+    .logo a {
+        font-size: 1rem; /* Make the logo smaller */
+        white-space: normal; /* Allow the logo to break into two lines */
+        line-height: 1.2; /* Adjust line height for readability */
+    }
+}
+
+/* For screens below 480px */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+/* Hero Section with Parallax Background */
+.hero-section {
+    height: 80vh;
+    background: url('glacier.jpg') center/cover fixed no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-align: center;
+    animation: fadeInUp 1.5s ease;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.discover-btn {
+    padding: 1rem 2rem;
+    background-color: rgb(0, 0, 0);
+    color: rgb(238, 234, 234);
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.discover-btn:hover {
+    font-size: 1.3rem;
+    transform: scale(1.1)rotate(7deg);
+}
+/* Responsive Styles for Larger Screens (1024px and above) */
+@media (min-width: 1024px) {
+    .hero-section h1 {
+        font-size: 3rem; /* Larger font size for big screens */
+    }
+
+    .hero-section p {
+        font-size: 1.6rem; /* Increase paragraph size slightly */
+    }
+    .discover-btn {
+        padding: 1.2rem 2.5rem;
+        font-size: 1.2rem;
+    }
+}
+
+/* Responsive Styles for Medium Screens (768px to 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .hero-section {
+        height: 70vh; /* Adjust height for medium screens */
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .discover-btn {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* Responsive Styles for Small Screens (480px to 767px) */
+@media (max-width: 767px) and (min-width: 480px) {
+    .hero-section {
+        height: 65vh; /* Smaller height for smaller screens */
+        padding: 0 1rem;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+
+    .discover-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Responsive Styles for Extra Small Screens (480px and below) */
+@media (max-width: 480px) {
+    .hero-section {
+        height: 60vh; /* Smaller height for mobile devices */
+        padding: 0 1rem;
+    }
+
+    .hero-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .discover-btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.8rem;
+    }
+}
+/* Further Adjustments for Ultra Small Screens (300px and below) */
+@media (max-width: 300px) {
+    .hero-section {
+        height: 55vh; /* Further reduce height */
+        padding: 0 0.5rem; /* Extra padding to prevent content overflow */
+    }
+
+    .hero-section h1 {
+        font-size: 1.1rem; /* Smaller font for heading */
+        line-height: 1.2;  /* Adjust line height to avoid overlap */
+    }
+
+    .hero-section p {
+        font-size: 0.8rem; /* Smaller paragraph size */
+        margin-bottom: 0.8rem; /* Smaller gap below the paragraph */
+    }
+
+    .discover-btn {
+        padding: 0.5rem 1rem; /* Smaller padding on button */
+        font-size: 0.5rem; /* Smaller font size for the button */
+    }
+}
+/* Attractions Section Styles */
+.attractions {
+    background-color: rgba(255, 255, 255, 0.95); /* Light background with transparency */
+    padding: 40px 20px; /* Padding for spacing */
+    margin-top: 20px; /* Space above the section */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for effects */
+}
+
+/* Attractions Title */
+.attractions h2 {
+    font-size: 26px; /* Font size for the title */
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Space below the title */
+    color: #333; /* Title color */
+}
+
+/* Attractions List Styles */
+#attractions-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+/* Individual Attraction Item */
+#attractions-list li {
+    font-size: 1.5rem; /* Font size for each attraction */
+    margin: 10px 0; /* Margin for spacing between items */
+    line-height: 1.5; /* Increase line height for readability */
+    color: #555; /* Text color */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .attractions {
+        padding: 30px 15px; /* Adjust padding */
+    }
+
+    .attractions h2 {
+        font-size: 24px; /* Slightly smaller title font size */
+    }
+
+    #attractions-list li {
+        font-size: 16px; /* Slightly smaller attraction font size */
+    }
+}
+
+@media (max-width: 768px) {
+    .attractions {
+        padding: 20px 10px; /* Further adjust padding */
+    }
+
+    .attractions h2 {
+        font-size: 22px; /* Smaller title font size */
+    }
+
+    #attractions-list li {
+        font-size: 14px; /* Smaller attraction font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .attractions {
+        padding: 15px 5px; /* Minimal padding */
+    }
+
+    .attractions h2 {
+        font-size: 20px; /* Smaller title font size */
+    }
+
+    #attractions-list li {
+        font-size: 12px; /* Smaller attraction font size */
+    }
+}
+
+@media (max-width: 300px) {
+    .attractions {
+        padding: 10px 5px; /* Minimal padding */
+    }
+
+    .attractions h2 {
+        font-size: 18px; /* Smaller title font size */
+    }
+
+    #attractions-list li {
+        font-size: 10px; /* Smaller attraction font size */
+    }
+}
+
+/* Glaciers Section with Border Animation */
+/* Glaciers Section Styling */
+.glaciers-section {
+    background-color: #f0f8ff; /* Light blue background */
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+.glaciers-section h2 {
+    font-size: 2rem;
+    color: #006699; /* Deep blue color */
+    margin-bottom: 20px;
+    letter-spacing: 1px; /* More readable */
+}
+
+.glaciers-section p {
+    font-size: 1.1rem;
+    color: #333; /* Neutral text color */
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.glacier-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+.glacier-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 10px 16px 12px rgba(0, 0, 0, 0.555); /* Slightly deeper shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glacier-card:hover {
+    background-color: rgba(32, 178, 171, 0.459);
+    border: 2px solid;
+    border-inline-color: red;
+    transform: translateY(-10px); /* Lift card on hover */
+    box-shadow: 20 18px 16px rgba(0, 0, 0, 0.89); /* Deeper shadow on hover */
+}
+
+.glacier-card h3 {
+    font-size: 1.5rem;
+    color: #004466; /* Deep teal color */
+    margin-bottom: 10px;
+}
+
+.glacier-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Responsive Design - Media Queries */
+@media (max-width: 1024px) {
+    .glaciers-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .glaciers-section p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .glacier-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .glacier-card p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .glaciers-section {
+        padding: 40px 15px;
+    }
+
+    .glaciers-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .glacier-cards {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .glacier-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .glacier-card p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .glaciers-section {
+        padding: 30px 10px;
+    }
+
+    .glaciers-section h2 {
+        font-size: 1.4rem;
+    }
+
+    .glacier-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .glacier-card p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .glaciers-section {
+        padding: 20px 5px;
+    }
+
+    .glaciers-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .glacier-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .glacier-card p {
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 250px) {
+    .glaciers-section {
+        padding: 10px 5px;
+    }
+
+    .glacier-cards {
+        display: flex;
+        flex-direction: column; /* Stack cards vertically */
+        flex-wrap: nowrap; /* Prevent wrapping */
+        align-items: center;
+    }
+
+    .glacier-card {
+        width: 100%; /* Ensure the card takes full width */
+        margin: 5px 0; /* Reduce margins */
+        padding: 10px; /* Reduce padding inside cards */
+        box-sizing: border-box; /* Include padding in width calculation */
+    }
+
+    .glaciers-section h2 {
+        font-size: 1rem;
+    }
+
+    .glacier-card h3 {
+        font-size: 0.9rem;
+    }
+
+    .glacier-card p {
+        font-size: 0.75rem;
+    }
+}
+/* Zero Point Section with 3d image slider & Text Reveal */
+.zero-point-section {
+    padding: 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+    overflow: hidden; /* To prevent overflow of elements */
+}
+
+/* Styling for the Text Reveal Effect */
+.reveal-text {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.reveal-text.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Image Slider Styling */
+.image-slider {
+    display: flex;
+    justify-content: center;
+    perspective: 1000px;
+    margin: 20px 0;
+}
+.slider-image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 1s ease-in-out;
+    margin: 0 10px;
+    transform-style: preserve-3d;
+}
+.slider-image:nth-child(1) { animation: rotate-images 9s infinite linear; }
+.slider-image:nth-child(2) { animation: rotate-images 9s infinite linear 3s; }
+.slider-image:nth-child(3) { animation: rotate-images 9s infinite linear 6s; }
+@keyframes rotate-images {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+    .slider-image {
+        width: 250px;
+        height: 170px;
+    }
+}
+@media (max-width: 768px) {
+    .slider-image {
+        width: 200px;
+        height: 150px;
+    }
+    .zero-point-section {
+        padding: 15px;
+    }
+    .reveal-text {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 480px) {
+    .slider-image {
+        width: 150px;
+        height: 120px;
+    }
+    .zero-point-section h2 {
+        font-size: 1.2rem;
+    }
+    .reveal-text {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 320px) {
+    .slider-image {
+        width: 110px;
+        height: 90px;
+    }
+    .zero-point-section h2 {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    .reveal-text {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 250px) {
+    .slider-image {
+        width: 100px;
+        height: 80px;
+    }
+
+    .zero-point-section {
+        padding: 10px;
+    }
+
+    .reveal-text {
+        font-size: 0.8rem;
+    }
+}
+/* Ensuring elements fit within the main section for ultra-small screens */
+@media (max-width: 200px) {
+    .slider-image {
+        width: 80px;
+        height: 60px;
+    }
+
+    .zero-point-section h2 {
+        font-size: 1rem;
+    }
+
+    .reveal-text {
+        font-size: 0.7rem;
+    }
+
+    .zero-point-section {
+        padding: 5px;
+    }
+}
+/* Gateway of Ladakh Section - Image Hover Effects */
+.gateway-ladakh-section {
+    padding: 40px;
+    background-color: #f4f7f6;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Section Title */
+.gateway-ladakh-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+    max-width: 100%;
+    overflow: hidden;
+}
+/* Underline effect for section title */
+.gateway-ladakh-section h2::after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 3px;
+    background-color: #ff5722; /* Accent color */
+    left: 10%;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+.gateway-ladakh-section h2:hover::after {
+    width: 100%;
+}
+/* Content Wrapper */
+.gateway-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    gap: 30px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Styling for Fish Point & Gateway to Ladakh Divs */
+.fish-point, .gateway-ladakh {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    width: 45%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fish-point:hover, .gateway-ladakh:hover {
+    transform: translateY(-10px);
+    box-shadow: 15px 28px 30px rgba(223, 9, 9, 0.651);
+}
+
+/* Headings for Each Point */
+.fish-point h3, .gateway-ladakh h3 {
+    font-size: 1.8rem;
+    color: #ff5722;
+    margin-bottom: 15px;
+}
+
+/* Text Inside Each Section */
+.fish-point p, .gateway-ladakh p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For larger screens (1024px and above) */
+@media (min-width: 1024px) {
+    .gateway-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* For tablets (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .fish-point, .gateway-ladakh {
+        width: 45%; /* Keep boxes side by side for larger tablets */
+    }
+
+    .gateway-ladakh-section h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* For mobile screens (480px - 768px) */
+@media (max-width: 768px) and (min-width: 480px) {
+    .fish-point, .gateway-ladakh {
+        width: 100%;
+    }
+
+    .gateway-ladakh-section h2 {
+        font-size: 2rem;
+    }
+    
+    .fish-point h3, .gateway-ladakh h3 {
+        font-size: 1.6rem;
+    }
+
+    .fish-point p, .gateway-ladakh p {
+        font-size: 0.95rem;
+    }
+}
+
+/* For smaller mobile screens (480px and below) */
+@media (max-width: 480px) {
+    .gateway-ladakh-section {
+        padding: 20px;
+    }
+
+    .fish-point, .gateway-ladakh {
+        width: 100%; /* Full width for small screens */
+    }
+
+    .gateway-ladakh-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .fish-point h3, .gateway-ladakh h3 {
+        font-size: 1.5rem;
+    }
+
+    .fish-point p, .gateway-ladakh p {
+        font-size: 0.95rem;
+    }
+}
+
+/* For extra small mobile screens (300px - 400px) */
+@media (max-width: 400px) {
+    .gateway-ladakh-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .fish-point h3, .gateway-ladakh h3 {
+        font-size: 1.3rem;
+    }
+
+    .fish-point p, .gateway-ladakh p {
+        font-size: 0.9rem;
+    }
+}
+
+/* For ultra small mobile screens (200px and below) */
+@media (max-width: 200px) {
+    .gateway-ladakh-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .fish-point h3, .gateway-ladakh h3 {
+        font-size: 1rem;
+    }
+
+    .fish-point p, .gateway-ladakh p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Seasons Section with Enhanced Animations */
+.seasons-section {
+    background: linear-gradient(to bottom, #f5f5f5, #e0e0e0); /* Gradient Background */
+    padding: 2rem;
+    position: relative;
+    overflow: hidden; /* Prevents overflow */
+    margin: 2rem;
+}
+
+.seasons-section::before {
+    content: '';
+    position: absolute;
+    top: -70px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: radial-gradient(circle, rgba(243, 72, 4, 0.966) 0%, rgba(6, 224, 17, 0.719) 80%);
+    animation: wave-animation 7s linear infinite; /* Wave Animation */
+}
+
+@keyframes wave-animation {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+.seasons-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Text shadow effect */
+}
+
+.seasons-section p {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.seasons-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+    gap: 1rem; /* Space between cards */
+}
+
+.season-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 300px; /* Fixed width for cards */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.6s ease, box-shadow 0.3s ease;
+    position: relative; /* Position for flipping effect */
+    overflow: hidden; /* Prevents content overflow */
+}
+
+.season-card:hover {
+    transform: scale(1.05); /* Slight scale on hover */
+    box-shadow: 10px 6px 20px rgba(0, 0, 0, 0.493);
+}
+
+/* Flip effect */
+.season-card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    transition: transform 2s;
+    transform: rotateY(180deg); /* Back face */
+}
+
+.season-card:hover:before {
+    transform: rotateY(90deg); /* Flipping effect */
+}
+.season-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.season-card p {
+    font-size: 1rem;
+    color: #059fec;
+    transition: color 0.9s ease; /* Color change on hover */
+}
+
+.season-card:hover p {
+    color: #000; /* Color change on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .seasons-section {
+        padding: 1.5rem; /* Adjust padding for smaller screens */
+    }
+    .season-card {
+        width: 45%; /* Two cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .season-card {
+        width: 100%; /* Full width for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .season-card {
+        padding: 1rem; /* Adjust padding for very small screens */
+    }
+}
+
+@media (max-width: 370px) {
+    .season-card h3 {
+        font-size: 1.2rem; /* Smaller heading */
+    }
+    .season-card p {
+        font-size: 0.9rem; /* Smaller paragraph */
+    }
+}
+
+@media (max-width: 300px) {
+    .seasons-section h2 {
+        font-size: 1.5rem; /* Smaller heading */
+    }
+}
+
+@media (max-width: 200px) {
+    .seasons-section h2 {
+        font-size: 1.2rem; /* Even smaller heading */
+    }
+}
+
+/* Glassmorphism in Lakes Section */
+/* General Styles */
+.lakes-section {
+    background: url('fp.jpg') no-repeat center center/cover;
+    padding: 2.5rem 1rem;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Glassmorphism effect for lake-info */
+.lake-info {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 100%;
+    transition: transform 0.3s ease;
+}
+
+/* Heading Styles */
+.lakes-section h2 {
+    font-size: 1.8rem;
+    background: linear-gradient(to right, #000000, #ff3300);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.8rem;
+}
+
+.lakes-section p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    max-width: 80%;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Flexbox Layout for Lake Info Section */
+.lake-info img {
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+    margin: 1rem 0;
+    border-radius: 10px;
+    box-shadow: 8px 10px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+.lake-info p{
+    color:#e0e0e0 ;
+}
+/* Hover Effects */
+.lake-info:hover {
+    transform: scale(1.0);
+}
+
+.lake-info img:hover {
+    transform: scale(1.05);
+    box-shadow: 12px 16px 25px rgba(0, 0, 0, 0.5);
+}
+
+.lake-info p:hover {
+    text-shadow: 10px 10px 8px rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive Design */
+/* @media(min-width:1025px){
+    .lake-info p{
+        font-size: 1.6rem;
+    }
+    .lakes-section h2 {
+        font-size: 1.9rem;
+    }
+} */
+/* Large screens (1024px and below) */
+@media (max-width: 1024px) {
+    .lakes-section h2 {
+        font-size: 1.6rem;
+    }
+    .lake-info {
+        padding: 1.2rem;
+    }
+    .lake-info p{
+        font-size: 1.5rem;
+    }
+}
+
+/* Medium screens (768px and below) */
+@media (max-width: 768px) {
+    .lakes-section {
+        padding: 2rem 0.8rem;
+    }
+    .lakes-section h2 {
+        font-size: 1.4rem;
+    }
+    .lake-info {
+        padding: 1rem;
+        gap: 0.8rem;
+    }
+    .lake-info p{
+        font-size: 1.2rem;
+    }
+}
+
+/* Small screens (480px and below) */
+@media (max-width: 480px) {
+    .lakes-section {
+        padding: 1.5rem 0.6rem;
+    }
+    .lakes-section h2 {
+        font-size: 1.3rem;
+    }
+    .lake-info {
+        padding: 0.8rem;
+    }
+    .lake-info img {
+        width: 80%;
+        max-width: 190px;
+        border-radius: 8px;
+    }
+    .lake-info p{
+        font-size: 1rem;
+    }
+}
+
+/* Extra small screens (300px and below) */
+@media (max-width: 300px) {
+    .lakes-section {
+        padding: 1rem 0.4rem;
+    }
+    .lakes-section h2 {
+        font-size: 1.1rem;
+    }
+    .lake-info {
+        padding: 0.6rem;
+    }
+    .lake-info img {
+        width: 75%;
+    }
+}
+
+/* Ultra small screens (200px and below) */
+@media (max-width: 200px) {
+    .lakes-section h2 {
+        font-size: 0.9rem;
+    }
+    .lake-info {
+        padding: 0.4rem;
+    }
+    .lake-info img {
+        width: 70%;
+    }
+    .lake-info p{
+        font-size: 0.7rem;
+    }
+}
+
+/* Baltal Section Styling */
+.baltal-section {
+    background: linear-gradient(135deg, rgba(173, 216, 230, 0.8), #ffffff);
+    padding: 3rem;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.baltal-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: radial-gradient(circle, rgba(0, 128, 255, 0.1) 10%, transparent 50%);
+    z-index: -1;
+}
+
+.baltal-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    color: #333;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.baltal-section p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Activities Section */
+.baltal-activities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.baltal-activities h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.baltal-activities h3::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    transform: translateX(-50%);
+}
+
+.baltal-activities ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.baltal-activities li {
+    font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 600px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.baltal-activities li::before {
+    content: '•';
+    color: #0072ff;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.baltal-activities li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Styles */
+@media (min-width: 1024px) {
+    .baltal-activities {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .baltal-activities ul {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .baltal-activities li {
+        width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .baltal-section {
+        padding: 2rem;
+    }
+
+    .baltal-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .baltal-activities ul {
+        gap: 1rem;
+    }
+
+    .baltal-activities li {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .baltal-section {
+        padding: 1.5rem;
+    }
+
+    .baltal-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .baltal-activities h3 {
+        font-size: 1.6rem;
+    }
+
+    .baltal-activities li {
+        font-size: 1rem;
+        padding: 0.8rem 1.2rem;
+    }
+}
+@media (max-width: 350px) {
+    .baltal-activities ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem; /* Reduced gap between list items */
+    }
+
+    .baltal-activities li {
+        font-size: 0.9rem; /* Smaller font for very small screens */
+        padding: 0.7rem 1rem; /* Adjust padding to fit smaller screens */
+        width: 90%; /* Reduce width to give space around the edges */
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+    }
+}
+
+@media (max-width: 300px) {
+    .baltal-section h2 {
+        font-size: 1.4rem;
+    }
+
+    .baltal-activities h3 {
+        font-size: 1.4rem;
+    }
+}
+/* Places to Eat Section Styling */
+.places-to-eat-section {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 2rem 1rem; /* Padding for spacing */
+    text-align: center; /* Centered text */
+    position: relative;
+    border-radius: 8px; /* Slight rounding of corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.places-to-eat-section h2 {
+    font-size: 2rem; /* Heading size */
+    margin-bottom: 1rem; /* Space below the heading */
+    color: #333; /* Darker text color */
+}
+
+.places-to-eat-section p {
+    font-size: 1.1rem; /* Paragraph text size */
+    margin-bottom: 2rem; /* Space below the paragraph */
+    color: #666; /* Softer text color */
+    line-height: 1.5; /* Increased line height for readability */
+}
+
+/* Eatery Cards Container */
+.eatery-cards {
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack cards vertically */
+    gap: 1rem; /* Space between cards */
+    align-items: center; /* Center items horizontally */
+}
+
+/* Individual Eatery Card */
+.eatery-card {
+    background-color: #ffffff; /* White background for cards */
+    border-radius: 5px; /* Rounded corners */
+    padding: 1.5rem; /* Padding for content */
+    width: 100%; /* Full width */
+    max-width: 400px; /* Max width for larger screens */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
+}
+
+/* Hover effect to increase shadow */
+.eatery-card:hover {
+    transform: rotate(-1deg);
+    box-shadow: 10px 2px 6px rgba(8, 236, 8, 0.678); /* Slightly larger shadow */
+}
+
+.eatery-card h3 {
+    font-size: 1.5rem; /* Heading size for card */
+    margin-bottom: 0.5rem; /* Space below heading */
+    color: #444; /* Slightly darker color */
+}
+
+.eatery-card p {
+    font-size: 1rem; /* Paragraph text size in cards */
+    color: #777; /* Softer text color */
+    line-height: 1.4; /* Increased line height */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .places-to-eat-section h2 {
+        font-size: 1.8rem; /* Reduce heading size */
+    }
+}
+
+@media (max-width: 768px) {
+    .places-to-eat-section h2 {
+        font-size: 1.6rem; /* Further reduce heading size */
+    }
+    .eatery-card {
+        padding: 1rem; /* Reduce padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .places-to-eat-section h2 {
+        font-size: 1.4rem; /* Smaller heading */
+    }
+    .eatery-card {
+        max-width: 90%; /* More flexible width */
+    }
+}
+
+@media (max-width: 300px) {
+    .places-to-eat-section h2 {
+        font-size: 1.2rem; /* Smaller heading */
+    }
+    .eatery-card {
+        padding: 0.5rem; /* Further reduce padding */
+    }
+   
+}
+@media (max-width: 168px){
+    .eatery-card h3{
+        font-size: 0.8rem;
+    }
+    .eatery-card p{
+        font-size: 0.6rem;
+    }
+}
+/* Activities Section Styling */
+.activities-section {
+    padding: 3rem 1rem;
+    background-color: #f0f0f0;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.activities-section h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.activities-section p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #000000;
+    line-height: 1.5;
+}
+
+/* Activities Cards Container */
+.activities-cards {
+    display: flex;
+    flex-wrap: wrap; /* Ensures cards wrap to the next line */
+    justify-content: center;
+    gap: 1rem; /* Space between cards */
+}
+
+/* Individual Activity Card */
+.activity-card {
+    width: 100%;
+    max-width: 280px;
+    perspective: 1000px;
+    margin: 0 auto; /* Center cards */
+}
+
+.card-content {
+    width: 100%;
+    height: 300px; /* Fixed height for cards */
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d; /* Preserve 3D effects */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Flip effect on hover */
+.activity-card:hover .card-content {
+    transform: rotateY(180deg); /* Rotate on hover */
+}
+
+/* Front and Back Styles */
+.card-content .front,
+.card-content .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the back side when not facing */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Stack content vertically */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Front Side */
+.card-content .front {
+    background-color: white; /* White background */
+    color: #333; /* Text color */
+}
+
+/* Back Side */
+.card-content .back {
+    background-color: #333; /* Dark background */
+    color: gold; /* Gold text color */
+    transform: rotateY(180deg); /* Initial rotation for back side */
+}
+.card-content .back p{
+    padding: 10px;
+    color: whitesmoke;
+}
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .activities-section h2 {
+        font-size: 1.8rem; /* Reduced heading size */
+    }
+    .activity-card {
+        max-width: 90%; /* More flexible width */
+    }
+}
+
+@media (max-width: 768px) {
+    .activities-section h2 {
+        font-size: 1.6rem; /* Smaller heading */
+    }
+    .activity-card {
+        max-width: 100%; /* Full width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .activities-section h2 {
+        font-size: 1.4rem; /* Smaller heading */
+    }
+}
+
+@media (max-width: 300px) {
+    .activities-section {
+        padding: 1rem; /* Add padding to the section for spacing */
+    }
+
+    .activities-cards {
+        display: flex;             /* Use flexbox for layout */
+        flex-direction: column;    /* Stack cards vertically */
+        align-items: stretch;      /* Ensure cards stretch to fill the width */
+        width: 100%;               /* Full width */
+        margin: 0;                 /* Remove margins */
+        gap: 1rem;                 /* Add space between cards */
+    }
+
+    .activity-card {
+        width: 100%;               /* Full width for each card */
+        height: auto;              /* Height adjusts automatically */
+        padding: 0.5rem;           /* Add padding for spacing */
+        box-shadow: none;          /* Remove shadow for simplicity */
+        background-color: white;   /* Set background color */
+        border-radius: 4px;        /* Add slight border radius for softness */
+        overflow: hidden;          /* Ensure content doesn't overflow */
+    }
+
+    .activity-card h3 {
+        font-size: 1.1rem;         /* Adjust heading font size */
+        margin-bottom: 0.5rem;     /* Add margin below heading */
+    }
+
+    .activity-card p {
+        font-size: 0.9rem;         /* Adjust paragraph font size */
+        margin: 0;                 /* Remove default margin */
+    }
+}
+
+
+/* Footer Section with Soft Shadows */
+footer {
+    background-color: #333;
+    color: gold;
+    padding: 2rem 0;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in;
+    position:relative;
+}
+/* Responsive adjustments for footer-info */
+.footer-info {
+    max-width: 100%; /* Ensures no overflow */
+    word-wrap: break-word; /* Breaks long words to prevent overflow */
+    padding: 1rem 0;
+    margin: 0 auto;
+}
+
+/* Links styling for footer-links */
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+/* General footer styles for larger screens */
+@media (min-width: 769px) {
+    footer {
+        padding: 2rem 0;
+    }
+    .footer-copyright {
+        font-size: 1.2rem;
+    }
+}
+
+/* Styles for medium screens (up to 768px) */
+@media (max-width: 768px) {
+    footer {
+        padding: 1.5rem 0;
+    }
+    .footer-info, .footer-links {
+        max-width: 100%;
+        padding: 0 1rem; /* Adds padding for mobile devices */
+    }
+    .footer-copyright {
+        font-size: 1rem;
+    }
+}
+
+/* Styles for small screens (up to 480px and below) */
+@media (max-width: 480px) {
+    footer {
+        padding: 1rem 0;
+    }
+    .footer-info, .footer-links {
+        max-width: 100%;
+        padding: 0 0.5rem; /* Tighter padding for smaller screens */
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 0.5rem; /* Adds space between links for readability */
+    }
+
+    .footer-info p {
+        font-size: 0.9rem;
+        padding: 0 1rem; /* Adds padding to avoid text touching the sides */
+    }
+    .footer-copyright {
+        font-size: 0.9rem;
+        padding: 0 1rem; /* Adds padding to avoid text touching the sides */
+    }
+}
+.footer::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: radial-gradient(circle, rgba(223, 69, 8, 0.932) 0%, rgba(10, 204, 20, 0.719) 80%);
+}
+.footer-links a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-links a:hover {
+    color: gold;
+}
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    background-color: #ff0000; /* Background color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding */
+    font-size: 22px; /* Font size */
+    cursor: pointer; /* Cursor style */
+    display: none; /* Initially hidden */
+    z-index: 1000; /* On top of other elements */
+    transition: background-color 0.4s ease; /* Smooth transition */
+}
+
+/* Responsive Font Size and Positioning */
+@media (max-width: 1024px) {
+    .back-to-top {
+        bottom: 15px; /* Adjust position */
+        right: 15px; /* Adjust position */
+    }
+}
+
+@media (max-width: 768px) {
+    .back-to-top {
+        font-size: 16px; /* Smaller font size for smaller screens */
+        padding: 8px 12px; /* Reduced padding */
+        bottom: 10px; /* Adjust position */
+        right: 10px; /* Adjust position */
+    }
+}
+
+@media (max-width: 480px) {
+    .back-to-top {
+        font-size: 14px; /* Smaller font size for mobile screens */
+        padding: 6px 10px; /* Reduced padding */
+        bottom: 5px; /* Adjust position */
+        right: 5px; /* Adjust position */
+    }
+}
+
+.back-to-top:hover {
+    background-color: #0934f5; /* Darker background on hover */
+    transform: scale(1.2);
+}

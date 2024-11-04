@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Gurez Valley - Keef Tour And Travels</title>
+    <link rel="stylesheet" href="gurez.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+</head>
+<body>
+
+    <!-- Navbar (Consistent with Dal Lake, Pahalgam, Sonmarg pages) -->
+    <header class="navbar">
+            <div class="logo">
+                <a href="index.html">Keef Tour And Travels</a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="gurez.html" class="active">Gurez</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>Discover Gurez Valley</h1>
+        <p>Explore the untouched beauty of Gurez Valley, a hidden gem in Kashmir with mesmerizing landscapes and rich cultural heritage.</p>
+        <button class="discover-btn">Discover More</button>
+    </section>
+    <!-- Virtual Postcard Creator -->
+<div class="postcard-creator hidden">
+    <div class="postcard">
+        <img src="gurez1.jpg" alt="Gurez Valley" class="postcard-bg" />
+        <textarea class="postcard-text" placeholder="Write your message here..."></textarea>
+    </div>
+    <div class="postcard-controls">
+        <button class="postcard-btn" onclick="savePostcard()">Save Postcard</button>
+        <button class="postcard-btn" onclick="changeBackground()">Change Background</button>
+        <button class="postcard-btn" onclick="closePostcard()">Close</button>
+    </div>
+</div>
+    <!-- About Gurez Section -->
+    <section class="about-gurez">
+        <h2>About Gurez Valley</h2>
+        <p>Gurez Valley, located in Jammu and Kashmir, is renowned for its pristine beauty, unique culture, and serene environment. Encircled by snow-capped peaks, this valley offers a peaceful escape and is a must-visit for nature lovers.</p>
+    </section>
+    <!-- Major Attractions Section -->
+    <section class="attractions">
+        <h2>Major Attractions</h2>
+        <div class="attraction-item">
+            <h3>Habba Khatoon Peak</h3>
+            <p>A mesmerizing pyramid-shaped mountain named after the Kashmiri poetess, offering scenic views and a tranquil atmosphere.</p>
+        </div>
+        <div class="attraction-item">
+            <h3>Kishanganga River</h3>
+            <p>The crystal-clear waters of the Kishanganga River provide stunning views and great opportunities for trout fishing and riverside picnics.</p>
+        </div>
+        <div class="attraction-item">
+            <h3>Dawar Village</h3>
+            <p>Experience the traditional charm of Gurez in Dawar Village, where visitors can immerse themselves in local culture and lifestyle.</p>
+        </div>
+    </section>
+
+    <!-- Tulail Valley Section -->
+    <section class="tulail-valley">
+        <h2>Tulail Valley</h2>
+        <p>The Tulail Valley, a beautiful extension of Gurez, is known for its picturesque landscapes and remote, untouched beauty. Surrounded by mountains and lush greenery, it’s perfect for trekking and exploring the local flora and fauna.</p>
+    </section>
+
+    <!-- Local Culture Section -->
+    <section class="local-culture">
+        <h2>Local Culture and Heritage</h2>
+        <p>Gurez Valley is home to the Dardic people, who have a distinct culture, language, and traditions. The locals, known for their warm hospitality, offer visitors a taste of authentic Dardic cuisine, traditional music, and dances.</p>
+    </section>
+
+    <!-- Best Time to Visit Section -->
+    <section class="best-time">
+        <h2>Best Time to Visit Gurez</h2>
+        <p>The ideal time to visit Gurez Valley is from May to October, when the valley blooms with wildflowers and offers pleasant weather, perfect for sightseeing, trekking, and camping.</p>
+    </section>
+
+    <!-- Travel Tips Section -->
+    <section class="travel-tips">
+        <h2>Travel Tips</h2>
+        <ul>
+            <li>Carry a local SIM card for better network coverage.</li>
+            <li>Always have ID proof, as the valley is near the Line of Control.</li>
+            <li>Accommodation options are limited, so booking in advance is advisable.</li>
+        </ul>
+    </section>
+
+    <!-- Adventure Activities Section -->
+    <section class="adventure-activities">
+        <h2>Adventure Activities in Gurez</h2>
+        <p>Gurez offers thrilling outdoor activities for adventure seekers, including:</p>
+        <ul>
+            <li><strong>Trekking:</strong> Explore numerous trails that lead to breathtaking viewpoints, including hikes through dense forests and riverbanks.</li>
+            <li><strong>Camping:</strong> Experience camping under the starry skies surrounded by mountains.</li>
+            <li><strong>Fishing:</strong> Try trout fishing in the Kishanganga River, a favorite activity among locals and tourists alike.</li>
+        </ul>
+    </section>
+
+     <!-- Accommodation Options Section -->
+     <section class="accommodation">
+        <h2>Accommodation Options in Gurez</h2>
+        <p>Gurez offers a few basic but cozy accommodations for visitors:</p>
+        <ul>
+            <li>Guesthouses and lodges in Dawar Village</li>
+            <li>Homestays with local families for an immersive cultural experience</li>
+            <li>Camping facilities by the river for those seeking a close-to-nature experience</li>
+        </ul>
+    </section>
+
+    <!-- Local Cuisine Section -->
+    <section class="local-cuisine">
+        <h2>Local Cuisine</h2>
+        <p>While in Gurez, savor authentic Kashmiri and Dardic dishes. The valley offers simple yet delicious meals, including dishes like Rogan Josh, Gushtaba, and traditional Dardic bread.</p>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <h2>Gurez Valley Gallery</h2>
+        <div class="gallery-grid">
+            <img src="gul1.jpg" alt="Gurez Valley">
+            <img src="gul2.jpg" alt="Kishanganga River">
+            <img src="gul3.jpg" alt="Habba Khatoon Peak">
+            <img src="gul4.jpg" alt="Tulail Valley">
+        </div>
+    </section>
+<!-- Map Section -->
+<section class="map-section">
+    <h2> Our Location</h2>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.6728855642673!2d74.80283767492854!3d34.052261217730695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e18fc4f6d99167%3A0x919d2b0188f61e7f!2sKeef%20Tour%20And%20Travels!5e0!3m2!1sen!2sin!4v1730197547037!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" >
+        </iframe>
+    </div>
+</section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-info">
+            <p>&copy; 2024 Keef Tour And Travels | All Rights Reserved</p>
+            <p>Rambagh, Payeen Srinagar, Jammu & Kashmir</p>
+            <p>Email: info.keeftravels@gmail.com | Phone: +91-8825058040</p>
+        </div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </footer>
+    <button id="backToTop" class="back-to-top">^</button>
+<script src="gurez.js"></script>
+</body>
+</html>

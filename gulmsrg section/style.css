@@ -1,0 +1,1927 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  width: 100%;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: black;
+  background-color: transparent;
+}
+.navbar h1 {
+  padding-right: 230px;
+  font-size: 40px;
+  font-weight: 250;
+  cursor: pointer;
+}
+.navbar button {
+  border-radius: 10rem;
+  border: 3px solid black;
+  padding: 5px 1.6rem;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  color: black;
+  font-weight: 700;
+}
+.navbar p {
+  position: relative;
+  font-size: 20px;
+  border: 2px solid black;
+  border-radius: 9px;
+  font-size: 20px;
+  padding: 5px;
+  cursor: pointer;
+}
+.dropdownnav {
+  /* display: none;  pehle
+  background-color: aquamarine;
+  position: absolute;
+  right: 330px;       pehle 
+  right: 60px;
+  z-index: 1;
+   max-width: 13%; pehle 
+  max-width: 180px;
+  min-height: 60px;
+  padding: 5px;    pehle*/
+  display: none;  /* Initially hidden */
+  background-color: rgba(127, 255, 212, 0.199);
+  position: absolute;
+  left: 61%;
+  top: 45px; /* Adjust based on the position of the "Contact" paragraph */
+  z-index: 1;
+  max-width: 180px;
+  min-height: 60px;
+  padding: 10px;
+  border-radius: 8px;
+  border: solid;
+  box-shadow: 4px 15px 26px rgba(0, 0, 0, 0.922);
+
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: black;
+  background-color: whitesmoke;
+}
+.yasir {
+  position: relative;
+  background-image: url(gulmargCOVER.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+.overlay {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.199);
+  width: 100%;
+  height: 100vh;
+}
+
+
+@media (max-width: 768px) {
+  .navbar h1 {
+    padding-right: 0;
+    font-size: 30px;
+  }
+
+  .navbar p {
+    font-size: 18px;
+    padding: 5px 10px;
+  }
+
+  .navbar button {
+    padding: 5px 1.2rem;
+    font-size: 14px;
+  }
+
+  .dropdownnav {
+   
+    max-width: 150px;
+  }
+}
+
+/* Mobile phones (480px and smaller) */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .navbar h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .navbar p {
+    font-size: 16px;
+  }
+
+  .navbar button {
+    font-size: 12px;
+  }
+
+  .dropdownnav {
+    
+    max-width: 120px;
+  }
+
+  .yasir {
+    height: 90vh; /* Adjusted for smaller screens */
+  }
+}
+/* Modal styling */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000; /* Sits above other content */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 9px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 25px;
+  cursor: pointer;
+}
+ .section {
+max-width: 100%;
+  min-height: 100vh;
+   margin: 1rem; 
+   box-shadow: 0 12px 50px rgba(0, 0, 0, 0.904);
+   border-radius: 9px;
+   padding-bottom: 1.02rem;
+} 
+.section h1 {
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: black;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-left: 3rem ;
+}
+.section p {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-left: 3rem;
+}
+
+.banday {
+  
+  border-radius: 5px;
+  
+  flex: 1;
+  
+  min-height: 300px;
+  text-align: justify;
+  padding: 1rem;
+}
+.music {
+  
+   background-image: url(gulmarg1.jpg);
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+  min-height: 300px;
+  border-radius: 5px;
+}
+.sundas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: stretch;
+  /* background-color: red; */
+  margin: 1rem;
+  padding: 20px;
+  gap:10px;
+  max-width: 100%;
+  /* min-height: 100%; */
+}
+@media (max-width: 768px) {
+  .sundas {
+    flex-direction: column; /* Stacks vertically for smaller screens */
+    align-items: center;
+  }
+
+  .banday, .music {
+    width: 100%; /* Take full width on smaller screens */
+    min-height: 200px; /* Adjust height on smaller screens */
+  }
+}
+.johndoe {
+  display: flex;
+  min-height: 50vh;
+  margin-top: 13px;
+  margin-left: 6rem;
+  margin-right: 5rem;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+.snow {
+  background-image: url(photo-1620293967466-36d1a62e353d.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 20%;
+  border-radius: 8px;
+ 
+}
+.rain,.snow,.thunder,.water{
+  min-height: 200px;
+}
+.rain {
+  background-image: url(tamana.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 20%;
+  border-radius: 8px;
+}
+.thunder {
+  background-image: url(kucher.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 20%;
+  border-radius: 8px;
+}
+.water {
+  background-image: url(india.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 20%;
+  border-radius: 8px;
+}
+@media (max-width: 1024px) {
+  .johndoe {
+    flex-direction: column;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .snow, .rain, .water, .thunder {
+    width: 100%;  /* Each div will stack on top of each other */
+    margin-bottom: 10px;
+  }
+}
+
+/* Large mobile phones and smaller tablets (width <= 768px) */
+@media (max-width: 768px) {
+  .johndoe {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-bottom: 20px;
+  }
+
+  .snow, .rain, .water, .thunder {
+    width: 100%;
+    min-height: 150px; /* Adjust height for smaller screens */
+  }
+}
+
+/* Small mobile phones (width <= 480px) */
+@media (max-width: 480px) {
+  .johndoe {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .snow, .rain, .water, .thunder {
+    width: 100%;
+    min-height: 120px;
+  }
+}
+.Things{
+  margin: 3rem ;
+   border-radius: 9px;
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.904);
+  max-width: 100%;
+  min-height: 100vh auto;
+  padding: 2rem;
+ 
+  
+}
+.Things h1 {
+  font-size: 2.5rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  text-decoration: underline;
+  text-align: center;
+  text-transform: uppercase;
+}
+.Things p {
+  cursor: pointer;
+  font-size: 1.02rem;
+  font-weight: 900;
+  text-align: center;
+  
+}
+ol {
+  list-style-type: decimal;
+  padding: 1.5rem;
+  margin-left:1.5rem ;
+}
+
+li {
+  margin: 0.75rem 0;
+  font-size: 1.5rem; 
+  /* position: relative; This ensures that the background color stays within the li */
+  
+}
+li:hover {
+  background-color: rgba(190, 37, 165, 0.74);
+  cursor: pointer;
+    border-radius: 9px;
+   
+}
+li a:hover, li span:hover {
+  background-color: transparent; /* Prevents a separate hover effect on the link */
+
+ 
+}
+span {
+  font-size: 1.6rem;
+  font-weight: 900;
+ 
+}
+
+.Things a {
+  text-decoration: none;
+  cursor: pointer;
+  
+}
+
+.button6 {
+  margin-top: 5px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgba(201, 53, 144, 0.767);
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background-color 0.6s ease;
+}
+.button6:hover {
+  background-color: rgba(128, 202, 30, 0.767);
+  color: antiquewhite;
+  font-size: 1.02rem;
+}
+@media (max-width: 1024px) {
+  .Things {
+      max-width: 90%;
+      padding: 1.5rem;
+  }
+
+  .Things h1 {
+      font-size: 2rem;
+  }
+
+  li {
+      font-size: 1.3rem;
+  }
+
+  span {
+      font-size: 1.4rem;
+  }
+
+  .button6 {
+      padding: 10px 20px;
+  }
+}
+
+/* Large mobile phones and smaller tablets (width <= 768px) */
+@media (max-width: 768px) {
+  .Things {
+      max-width: 95%;
+      padding: 1.5rem;
+  }
+
+  .Things h1 {
+      font-size: 1.8rem;
+  }
+
+  li {
+      font-size: 1.2rem;
+  }
+
+  span {
+      font-size: 1.3rem;
+  }
+
+  .button6 {
+      padding: 8px 18px;
+  }
+}
+
+/* Small mobile phones (width <= 480px) */
+@media (max-width: 480px) {
+  .Things {
+      max-width: 98%;
+      padding: 1rem;
+  }
+
+  .Things h1 {
+      font-size: 1.5rem;
+  }
+
+  li {
+      font-size: 1.1rem;
+  }
+
+  span {
+      font-size: 1.2rem;
+  }
+
+  .button6 {
+      padding: 6px 16px;
+  }
+}
+
+.gondola {
+  margin: 2rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  box-shadow: 0 12px 50px rgba(4, 236, 224, 0.856);
+  border-radius: 9px;
+}
+.gondola h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.gon1 h2 {
+  /* margin-left: 12px; */
+  /* background-color: red; */
+  /* margin-top: 12px;
+  margin-bottom: 20px; */
+  font-size: 2rem;
+  background-color: rgba(255, 0, 0, 0.575);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.gon1 p {
+   font-weight: 500;
+  margin-top: 2rem;
+  font-size: 1.3rem;
+}
+.gon1 .button6 {
+  /* text-align: center;
+  margin-left: 6rem; */
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: rgba(53, 171, 201, 0.911);
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.6s ease;
+  margin-left: 7rem;
+}
+.gon1 .button6:hover{
+ background-color: black;
+ color: antiquewhite;
+ 
+}
+/* Overlay for fading the background */
+.gon1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.37); /* This makes the image darker */
+  border-radius: 10px;
+  z-index: 1;
+  opacity: 1; /* Adjust this for more or less fading */
+}
+
+.gon1 h2, .gon1 p, .gon1 .button6 {
+  position: relative;
+  z-index: 2; /* Ensures text stays above the overlay */
+}
+.gon1 {
+  background-image: url(sos.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  width: 50%;
+  text-align: justify;
+  /* height: 47rem; */
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(22, 159, 194, 0.87);
+
+}
+.gon2 {
+  width: 40%;
+  background-image: url(saif.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  /* height: 47rem; */
+  box-shadow: 0 10px 20px rgba(22, 159, 194, 0.87);
+}
+.gon12 {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1.05rem;
+  /* min-width: 100%;
+  min-height: 100%; */
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2rem;
+ 
+}
+/* Responsive styling */
+
+/* For tablets and small laptops (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .gondola h1 {
+    font-size: 3rem;
+  }
+
+  .gon12 {
+    width: 100%;
+    flex-direction: row;
+    
+  }
+
+  .gon1, .gon2 {
+    width: 80%;
+    margin-bottom: 2rem;
+    height: auto;
+  }
+
+  .gon1 {
+    
+    padding: 1.5rem;
+    width: 50%;
+  }
+  .gon2{
+    width: 40%;
+  }
+
+  .gon1 h2 {
+    font-size: 1.8rem;
+  }
+
+  .gon1 p {
+    font-size: 1rem;
+  }
+
+  .gon1 .button6 {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* For mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .gondola h1 {
+    font-size: 2.5rem;
+  }
+
+  .gon1, .gon2 {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .gon1 h2 {
+    font-size: 1.5rem;
+  }
+
+  .gon1 p {
+    font-size: 0.9rem;
+  }
+
+  .gon1 .button6 {
+    padding: 7px 14px;
+    font-size: 0.85rem;
+  }
+}
+
+/* For small mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .gondola h1 {
+    font-size: 2rem;
+  }
+
+  .gon1, .gon2 {
+    width: 100%;
+    padding: 0.8rem;
+  }
+
+  .gon1 h2 {
+    font-size: 1.3rem;
+  }
+
+  .gon1 p {
+    font-size: 0.8rem;
+  }
+
+  .gon1 .button6 {
+   
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+.maptext {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  margin: 2rem;
+  box-shadow: 15px 19px 50px rgba(179, 10, 142, 0.822);
+  border-radius: 9px;
+}
+.map {
+  flex: 1;
+  margin: 1rem;
+}
+.map  iframe {
+  width: 100%;
+  height: 100%;
+  max-height: 650px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 9px 40px rgba(0, 0, 0, 0.822);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.map iframe:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.904);
+}
+
+.text {
+  flex: 1;
+  border-radius: 10px;
+  margin: 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.text:hover{
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+.text h3,.snowmob h3{
+  margin-top: 15px;
+  margin-left: 15px;
+  font-size: 2rem;
+  font-weight: 900;
+  text-shadow:0 15px 40px rgba(255, 0, 0, 0.89);
+  
+}
+.text p{
+  font-size: 1.5rem;
+}
+/* Responsiveness for smaller screens */
+@media (max-width: 1024px) {
+  .maptext {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .map iframe {
+    max-height: 500px;
+  }
+
+  .text h3 {
+    font-size: 1.75rem;
+  }
+
+  .text p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile view (width <= 768px) */
+@media (max-width: 768px) {
+  .map iframe {
+    max-height: 400px;
+  }
+
+  .text h3 {
+    font-size: 1.5rem;
+  }
+
+  .text p {
+    font-size: 1rem;
+  }
+}
+
+/* Small mobile view (width <= 480px) */
+@media (max-width: 480px) {
+  .map iframe {
+    height: 300px;
+  }
+
+  .text h3 {
+    font-size: 1.3rem;
+  }
+
+  .text p {
+    font-size: 0.9rem;
+  }
+}
+
+.waza{
+  /* width: 100%;
+  height: 100%; */
+  padding: 2rem;
+  margin: 4rem;
+  box-shadow: 30px 30px 30px rgba(112, 9, 209, 0.822);
+  border-radius: 9px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.8rem;
+ 
+}
+.ice{
+  flex: 1;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ margin-left: 25px;
+ max-width: 50%;
+ padding: 20px;
+}
+.ice h1{
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-shadow:0 15px 40px rgba(145, 255, 0, 0.938);
+  text-align: center;
+}
+.ice h3{
+ margin-left: 3rem;
+ font-size: 2rem;
+ font-weight: 700;
+ text-shadow:0 15px 40px rgba(255, 0, 0, 0.89);
+ text-align: center;
+}
+.ice p{
+  font-size: 1.5rem;
+  text-align: justify;
+}
+.ice:hover{
+  transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+.zool{
+  background-image: url(waja.jpg);
+  background-position: center;
+  background-size: cover;
+  
+  border-radius: 10px;
+  flex: 1;
+  height: 300px;
+}
+.zool:hover{
+   transform: scaleY(1.04) ;
+   transition: transform 0.3s;
+}
+.hdmi{
+  margin-top: 11rem;
+  background-image: url(gulmarg1.jpg);
+  background-position: center;
+  background-size: cover;
+  
+  border-radius: 10px;
+  flex: 1;
+  height: 300px;
+ 
+}
+.hdmi:hover{
+  transform: scaleY(1.04);
+  transition: transform 0.3s;
+}
+/* Responsive Styles for Mobile */
+@media screen and (max-width: 768px) {
+  .ice, .zool, .hdmi {
+    width: 90%;
+    max-width: 100%;
+    margin: 10px 0;
+  }
+
+  .ice h1 {
+    font-size: 2rem;
+  }
+
+  .ice h3 {
+    font-size: 1.5rem;
+  }
+
+  .ice p {
+    font-size: 1rem;
+  }
+
+  .zool, .hdmi {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .ice h1 {
+    font-size: 1.8rem;
+  }
+
+  .ice h3 {
+    font-size: 1.2rem;
+  }
+
+  .ice p {
+    font-size: 0.9rem;
+  }
+
+  .zool, .hdmi {
+    height: 200px;
+  }
+}
+ 
+.prepare{  
+  background-color: antiquewhite;
+  max-width: 1200px;
+  box-shadow: 17px 59px 70px rgba(198, 201, 14, 0.863);
+  margin: 4rem auto;
+  border-radius: 9px;
+  padding: 2rem;
+}
+.prepare:hover{
+  box-shadow: 0 20px 50px rgba(8, 131, 231, 0.904);
+  transform: scale(1.02)translateY(-8px);
+  transition: 0.6s ease-in-out;
+}
+.prepare p{
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  color: black;
+}
+.prepare h5{
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration-line: underline;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.prepare h2{
+  text-align: center;
+  font-weight: 900;
+  padding-bottom: 1rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.prepare ol li {
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+  color: black;
+}
+ .men{
+ border-radius: 10px;
+ height: auto;
+ margin: 1.5rem auto;
+ max-width: 50%;
+ }
+ #yo{
+   width: 40%;
+   height: 30%;
+   margin-left: 0;
+ }
+ #po{
+  width: 40%;
+  height: 30%;
+  margin-left: 5rem;
+ }
+ #po:hover{
+  transform: rotate(-2deg);
+  transition: transform 0.6s ease-in-out;
+  cursor: crosshair;
+ }
+ #yo:hover{
+  transform: rotate(2deg);
+  transition: transform 0.6s ease-in-out;
+  cursor: crosshair;
+ }
+ /* Responsive Styling */
+@media screen and (max-width: 1024px) {
+  .prepare {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .prepare h2 {
+    font-size: 2rem;
+  }
+
+  .prepare h5 {
+    font-size: 1.5rem;
+  }
+
+  .prepare ol li {
+    font-size: 1rem;
+  }
+
+  .men {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .prepare h2 {
+    font-size: 1.8rem;
+  }
+
+  .prepare h5 {
+    font-size: 1.4rem;
+  }
+
+  .prepare ol li {
+    font-size: 0.95rem;
+  }
+
+  .men {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .prepare h2 {
+    font-size: 1.5rem;
+  }
+
+  .prepare h5 {
+    font-size: 1.2rem;
+  }
+
+  .prepare ol li {
+    font-size: 0.9rem;
+  }
+
+  .men {
+    width: 100%;
+  }
+}
+
+ .helisection{
+ border-radius: 10px;
+  min-height: 100%;
+  margin: 3rem ;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 15px 30px 60px rgba(10, 9, 9, 0.966);
+  transition: 0.3s ease-in-out;
+  max-width: 1200px; /* Restrict width on larger screens */
+ }
+ .helisection:hover{
+    background-image: url(helipad.jpg);
+    background-position: center;
+    background-size: cover;
+    box-shadow: 25px 50px 80px rgba(226, 194, 9, 0.904);
+    transform: scale(1.02)translateY(-8px);
+ }
+ .helisection h1{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+  text-align: center;
+ }
+ .helisection h3{
+  text-decoration-line: underline;
+
+  font-weight: bold;
+  font-size: 1.8rem;
+  margin-left: 1rem;
+ }
+ .helisection p{
+  font-size: 1.2rem;
+  text-align: justify;
+  line-height: 1.8;
+  font-weight: 900;
+  margin: 1rem;
+  color: black;
+ }
+ .helisection p:hover{
+  background-color: rgba(224, 15, 161, 0.568);
+
+  border-radius: 5px;
+ }
+ .helisection ul{
+  margin-left: 3rem;
+ 
+ }
+ .helisection li {
+  font-size: 1.3rem;
+ 
+  list-style-type: disc;
+  font-weight: 700;
+}
+ .helisection li:hover{
+   /* background-color: transparent;       do it whatever you choose  */  
+   background-color: rgba(224, 220, 15, 0.575);
+   transition: background-color 0.3s ease;
+   border-radius: 5px;
+ }
+ /* Responsive styling for smaller screens */
+@media screen and (max-width: 1024px) {
+  .helisection h1 {
+    font-size: 2.5rem;
+  }
+
+  .helisection h3 {
+    font-size: 2rem;
+    margin-left: 1rem;
+  }
+
+  .helisection p {
+    font-size: 1.1rem;
+  }
+
+  .helisection ul {
+    margin-left: 2rem;
+  }
+
+  .helisection li {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .helisection {
+    padding: 1.5rem;
+    margin: 1rem auto;
+  }
+
+  .helisection h1 {
+    font-size: 2rem;
+  }
+
+  .helisection h3 {
+    font-size: 1.8rem;
+  }
+
+  .helisection p {
+    font-size: 1rem;
+  }
+
+  .helisection ul {
+    margin-left: 1.5rem;
+  }
+
+  .helisection li {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .helisection h1 {
+    font-size: 1.8rem;
+  }
+
+  .helisection h3 {
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+  }
+
+  .helisection p {
+    font-size: 0.95rem;
+  }
+
+  .helisection ul {
+    margin-left: 1rem;
+  }
+
+  .helisection li {
+    font-size: 0.9rem;
+  }
+}
+ .trekmain {
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 3rem ;
+  box-shadow: 25px 50px 80px rgba(219, 9, 226, 0.904);
+  max-width: 1200px; /* Restrict width on larger screens */
+ }
+ .trekmain h1 {
+  font-family: 'Georgia', serif;
+  font-weight: 900;
+  text-align: center;
+  font-size: 4rem;
+  color: #222;
+  margin-bottom: 1.5rem;
+}
+ .trekmain h3{
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-left: 2rem;
+ }
+ .trekmain p {
+  font-size: 1.2rem;
+  text-align: justify;
+  margin-inline: 4rem;
+  line-height: 1.8;
+  color: #555;
+}
+ #ho{
+  width: 80%;
+  display: block;
+  margin: 2rem ;
+  border-radius: 10px;
+ }
+ #ho:hover{
+  transform: rotate(-4deg);
+  transition: transform 0.9s;
+  cursor: grabbing;
+ }
+ /* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+  .trekmain h1 {
+    font-size: 2.5rem;
+  }
+
+  .trekmain h3 {
+    font-size: 2rem;
+  }
+
+  #ho {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .trekmain {
+    padding: 1.5rem;
+  }
+
+  .trekmain h1 {
+    font-size: 2rem;
+  }
+
+  .trekmain h3 {
+    font-size: 1.8rem;
+  }
+
+  #ho {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .trekmain h1 {
+    font-size: 1.5rem;
+  }
+  .trekmain h3 {
+    font-size: 1.5rem;
+  }
+  .trekmain p {
+    font-size: 1rem;
+  }
+  #ho {
+    width: 80%;
+  }
+}
+ #ko{
+ width: 50%;
+ height: auto;
+ margin-left: auto;
+ margin-right: auto;
+ display: block;
+ margin-bottom: 2rem;
+ margin-top: 2rem;
+ }
+ #ko:hover{
+  transform: rotate(-2deg);
+ }
+ .khilantrek, .snowmob{
+  border-radius: 10px;
+  padding: 2rem;
+    margin: 3rem ;
+    /* max-width: 1200px; Limit section width for larger screens */
+ }
+ .snowmob h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1c4b82; /* Add some color for engagement */
+}
+ .khilantrek,.snowmob h2{
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin-left: 2rem;
+  
+ }
+ .snowmob h3 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-left: 1.5rem;
+  margin-top: 1.5rem;
+  color: #345b87;
+}
+ .khilantrek, .snowmob p{
+  font-size: 1.2rem;
+  text-align: justify;
+  line-height: 1.2;
+ }
+ /* Media Queries for Responsiveness */
+
+/* Larger screens (1024px and above) */
+@media (min-width: 1024px) {
+  .snowmob {
+      padding: 3rem 4rem;
+      margin: 4rem;
+  }
+
+  .snowmob h1 {
+      font-size: 4rem;
+  }
+
+  .snowmob h2, .snowmob h3 {
+      font-size: 2.4rem;
+  }
+
+  .snowmob p {
+      font-size: 1.4rem;
+  }
+}
+
+/* Medium screens (768px to 1024px) */
+@media (max-width: 1024px) {
+  .snowmob {
+      padding: 2rem;
+  }
+
+  .snowmob h1 {
+      font-size: 3rem;
+  }
+
+  .snowmob h2, .snowmob h3 {
+      font-size: 2rem;
+  }
+
+  .snowmob p {
+      font-size: 1.2rem;
+  }
+}
+
+/* Small screens (up to 768px) */
+@media (max-width: 768px) {
+  .snowmob {
+      padding: 1.5rem;
+  }
+
+  .snowmob h1 {
+      font-size: 2.5rem;
+  }
+
+  .snowmob h2, .snowmob h3 {
+      font-size: 1.8rem;
+  }
+
+  .snowmob p {
+      font-size: 1.1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+  }
+
+  #ko {
+      width: 80%; /* Make the image smaller on small screens */
+      margin-left: auto;
+      margin-right: auto;
+  }
+}
+
+/* Extra small screens (up to 480px) */
+@media (max-width: 480px) {
+  .snowmob {
+      padding: 1rem;
+      margin: 1rem;
+  }
+
+  .snowmob h1 {
+      font-size: 2rem;
+  }
+
+  .snowmob h2, .snowmob h3 {
+      font-size: 1.6rem;
+  }
+
+  .snowmob p {
+      font-size: 1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+  }
+
+  #ko {
+      width: 100%; /* Full width image for smaller screens */
+  }
+}
+ table{
+  width: 80%;
+  margin: 1.5rem auto;
+  border-collapse: collapse;
+  background-color: whitesmoke;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.822);
+  border-radius: 15px;
+ }
+ thead{
+  background-color: #f2f2f2;
+  font-weight: bolder;
+  font-size: 1.5rem;
+ }
+ thead th {
+  padding: 15px;
+  font-size: 1.2rem;
+  text-align: left;
+  border: 3px solid #ccc;
+} 
+tbody td {
+  padding: 15px;
+  text-align: left;
+  font-size: 1rem;
+  border: 3px solid #ccc;
+}
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+    .khilantrek {
+        margin: 2rem;
+    }
+
+    th, td {
+        font-size: 18px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 16px;
+    }
+    
+    .khilantrek p {
+        font-size: 20px;
+    }
+}
+
+/* Full Table Display on Smaller Screens (max-width: 480px) */
+@media (max-width: 480px) {
+  table {
+      width: 100%;
+      display: block; /* Allow block display for better stacking */
+      overflow-x: auto; /* Enable horizontal scrolling on very small screens if needed */
+  }
+
+  th, td {
+      font-size: 12px; /* Reduce font size for smaller screens */
+      padding: 6px;
+      white-space: nowrap; /* Prevent text from wrapping within cells */
+  }
+
+  .khilantrek p {
+      font-size: 16px;
+  }
+
+  .khilantrek {
+      margin: 1rem;
+  }
+
+  /* Optional: Add horizontal scrolling for very small screens if the table is too large */
+  table::-webkit-scrollbar {
+      height: 8px;
+  }
+
+  table::-webkit-scrollbar-thumb {
+      background-color: #999;
+      border-radius: 10px;
+  }
+}
+.golfsec {
+  padding: 2rem;
+  margin: 3rem auto;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.golfsec h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #2d5c9dec;
+  margin-bottom: 1.5rem;
+}
+.golfsec p {
+  font-size: 1.2rem;
+  color: #333;
+  text-align: justify;
+  line-height: 1.6;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.golfsec a{
+  font-size: 18px;
+  text-align: justify;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  background-color: ghostwhite;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+}
+.golfsec a:hover{
+  background-color: blueviolet;
+  color: ghostwhite;
+}
+#co, #lo {
+  width: 40%;
+  height: auto;
+  margin: 2rem auto;
+  display: block;
+  transition: transform 0.9s ease, box-shadow 0.8s ease;
+}
+  #co:hover{
+  transform: rotate(-4deg);
+ }
+
+ #lo:hover{
+  transform: rotate(-4deg)scale(1.02);
+  box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.904);
+
+ }
+ .flexthem,.flexthis{
+  display: flex;
+  align-items: center;
+    justify-content: space-evenly;
+    margin: 3rem 0;
+ }
+ .flexthem p{
+  width: 40%;
+ font-size: 1.4rem;
+ text-align: justify;
+ }
+ 
+
+.flexthis iframe{
+  width: 48%;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 9px 40px rgba(0, 0, 0, 0.822);
+  transition: transform 1.3s ease, box-shadow 1.3s ease
+}
+.flexthis iframe:hover{
+  transform: scale(1.02);
+  box-shadow: 29px 42px 50px rgba(0, 0, 0, 0.904);
+} 
+/* Media Queries for Responsive Design */
+
+/* Larger screens (1024px and above) */
+@media (min-width: 1024px) {
+  .golfsec h1 {
+      font-size: 3rem;
+  }
+
+  .golfsec p {
+      font-size: 1.4rem;
+  }
+
+  #co, #lo {
+      width: 35%;
+  }
+
+  .flexthem p {
+      font-size: 1.3rem;
+  }
+}
+
+/* Medium screens (768px to 1024px) */
+@media (max-width: 1024px) {
+  .golfsec h1 {
+      font-size: 2.5rem;
+  }
+
+  .golfsec p {
+      font-size: 1.2rem;
+  }
+
+  #co, #lo {
+      width: 50%;
+  }
+}
+
+/* Small screens (up to 768px) */
+@media (max-width: 768px) {
+  .flexthem, .flexthis {
+      flex-direction: column;
+  }
+
+  .golfsec h1 {
+      font-size: 2rem;
+  }
+
+  .golfsec p {
+      font-size: 1.1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+  }
+
+  #co, #lo {
+      width: 80%;
+      margin-bottom: 2rem;
+  }
+
+  .flexthem p {
+      width: 100%;
+      margin-left: 1rem;
+      margin-right: 1rem;
+  }
+
+  .flexthis iframe {
+      width: 90%;
+      height: 350px;
+  }
+}
+
+/* Extra small screens (up to 480px) */
+@media (max-width: 480px) {
+  .golfsec {
+      padding: 1rem;
+  }
+
+  .golfsec h1 {
+      font-size: 1.8rem;
+  }
+
+  .golfsec p {
+      font-size: 1rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+  }
+
+  #co, #lo {
+      width: 100%;
+  }
+
+  .flexthis iframe {
+      width: 100%;
+      height: 300px;
+  }
+}
+ .birdsec {
+  padding: 2rem;
+  margin: 3rem ;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 20px 30px 40px rgba(123, 78, 207, 0.753);
+}
+.birdsec h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #2d5c9d;
+  margin-bottom: 1.5rem;
+}
+.birdsec a{
+  font-size: 18px;
+  font-weight: bold;
+  background-color: ghostwhite;
+  text-decoration: none;
+  color: rgb(218, 10, 10);
+ }
+ .birdsec a:hover{
+  background-color: black;
+  color: whitesmoke;
+ } 
+ .birdsec p {
+  font-size: 1.2rem;
+  text-align: justify;
+  line-height: 1.6;
+  color: #333;
+  margin-inline: 2rem;
+}
+
+.flexthesecont{
+  display: flex;
+  align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
+    flex-wrap: wrap; /* For responsive layout */
+ }
+ .flexthesecont p{
+ 
+  margin-left: 2rem;
+  text-align: justify;
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 40%;
+ }
+ .flexthesecont img{
+  margin-top: 2rem;
+  margin-right: 2rem;
+  max-width: 45%;
+  border-radius: 10px;
+  transition: transform 0.6s ease, box-shadow 0.9s ease;
+ }
+ .flexthesecont img:hover{
+  transform: scale(1.02)rotate(-6deg);
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.904);
+ }
+  /* Media Queries for Responsive Design */
+
+/* Larger screens (1024px and above) */
+@media (min-width: 1024px) {
+  .birdsec h1 {
+      font-size: 3rem;
+  }
+
+  .birdsec p {
+      font-size: 1.4rem;
+  }
+
+  .flexthesecont p {
+      font-size: 1.3rem;
+  }
+
+  .flexthesecont img {
+      width: 40%;
+  }
+}
+
+/* Medium screens (768px to 1024px) */
+@media (max-width: 1024px) {
+  .birdsec h1 {
+      font-size: 2.5rem;
+  }
+
+  .birdsec p {
+      font-size: 1.2rem;
+  }
+
+  .flexthesecont p {
+      font-size: 1.2rem;
+      width: 100%;
+      margin-left: 1rem;
+      margin-right: 1rem;
+  }
+
+  .flexthesecont img {
+      width: 45%;
+  }
+}
+
+/* Small screens (up to 768px) */
+@media (max-width: 768px) {
+  .flexthesecont {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .birdsec h1 {
+      font-size: 2rem;
+  }
+
+  .birdsec p {
+      font-size: 1.1rem;
+  }
+
+  .flexthesecont p {
+      width: 90%;
+      margin: 1rem 0;
+      text-align: center;
+  }
+
+  .flexthesecont img {
+      width: 90%;
+      margin-bottom: 2rem;
+  }
+}
+
+/* Extra small screens (up to 480px) */
+@media (max-width: 480px) {
+  .birdsec {
+      padding: 1rem;
+  }
+
+  .birdsec h1 {
+      font-size: 1.8rem;
+  }
+
+  .birdsec p {
+      font-size: 1rem;
+  }
+
+  .flexthesecont img {
+      width: 100%;
+      margin-bottom: 2rem;
+  }
+
+  .flexthesecont p {
+      width: 100%;
+      margin-left: 1rem;
+      margin-right: 1rem;
+  }
+}
+/* Base Styles for Footer */
+.gulmarg-footer {
+  background-color: #333;
+  color: #fff;
+  padding: 3rem 2rem;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+.gulmarg-footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.gulmarg-footer .footer-section {
+  flex-basis: 30%;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.gulmarg-footer .footer-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  color: #f9a825;
+}
+
+.gulmarg-footer .footer-section p,
+.gulmarg-footer .footer-section ul li a {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.gulmarg-footer .footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.gulmarg-footer .footer-section ul li {
+  margin-bottom: 0.8rem;
+}
+
+.gulmarg-footer .footer-section ul li a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.gulmarg-footer .footer-section  ul li a:hover {
+  color: #f9a825;
+  
+}
+/* Override hover effect for Quick Links in footer */
+.gulmarg-footer .footer-section.links ul li  {
+  color: #ddd; /* Default color for links */
+  text-decoration: none; /* Ensure no underline or other decoration */
+  transition: color 0.3s;
+}
+
+.gulmarg-footer .footer-section.links ul li:hover {
+  color: #f9a825; /* New hover color for links in footer */
+  background-color: transparent; /* Ensure no background changes on hover */
+}
+
+.gulmarg-footer .social-icons a {
+  color: #ddd;
+  font-size: 1.2rem;
+  margin-right: 1.2rem;
+  text-decoration: none;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.gulmarg-footer .social-icons a:hover {
+  color: #f8a622;
+  transform: scale(1.1);
+}
+
+.gulmarg-footer .footer-bottom {
+  margin-top: 3rem;
+  border-top: 1px solid #444;
+  padding-top: 1.5rem;
+  font-size: 1rem;
+  color: #aaa;
+}
+
+.gulmarg-footer .back-to-top {
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  background-color: #f9a825;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.gulmarg-footer .back-to-top:hover {
+  background-color: #333;
+  color: #fff;
+  transform: scale(1.2);
+}
+
+/* Responsive Media Queries */
+
+/* Larger Screens (Desktops, Laptops) */
+@media (min-width: 1024px) {
+  .gulmarg-footer .footer-content {
+    justify-content: space-around;
+  }
+
+  .gulmarg-footer .footer-section {
+    flex-basis: 22%;
+    margin-bottom: 0;
+  }
+}
+
+/* Medium Screens (Tablets) */
+@media (max-width: 1024px) {
+  .gulmarg-footer .footer-content {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .gulmarg-footer .footer-section {
+    flex-basis: 30%;
+  }
+}
+
+/* Small Screens (Tablets, Small Laptops) */
+@media (max-width: 768px) {
+  .gulmarg-footer .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .gulmarg-footer .footer-section {
+    flex-basis: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .gulmarg-footer .footer-section ul li {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Extra Small Screens (Mobile Phones) */
+@media (max-width: 480px) {
+  .gulmarg-footer .footer-section {
+    text-align: center;
+  }
+
+  .gulmarg-footer .footer-section ul {
+    padding-left: 0;
+  }
+
+  .gulmarg-footer .footer-section ul li {
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+  }
+
+  .gulmarg-footer .social-icons a {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+}
+

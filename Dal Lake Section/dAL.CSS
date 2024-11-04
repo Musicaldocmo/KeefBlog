@@ -1,0 +1,791 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    white-space: nowrap; /* Prevents logo from breaking into multiple lines for larger screens */
+}
+.logo a:hover{
+    color: darkgoldenrod;
+}
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem; /* Space between links */
+    flex-wrap: nowrap; /* Prevent wrapping of links */
+}
+
+.nav-links li {
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff6347;
+}
+.navbar .nav-links li a.active{
+    color: #ff6347;
+}
+/* For larger screens (1024px and above) */
+@media (min-width: 1024px) {
+    .navbar {
+        padding: 1rem 2rem;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+}
+
+/* For screens 768px to 1024px */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .navbar {
+        padding: 0.8rem 1.5rem;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+    }
+
+    .nav-links {
+        gap: 0.8rem; /* Adjust space between links */
+    }
+}
+
+/* For screens 480px to 768px */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.6rem 1rem;
+    }
+
+    .nav-links {
+        gap: 0.5rem; /* Adjust gap to avoid hidden links */
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+
+    .logo a {
+        font-size: 1rem; /* Make the logo smaller */
+        white-space: normal; /* Allow the logo to break into two lines */
+        line-height: 1.2; /* Adjust line height for readability */
+    }
+}
+
+/* For screens below 480px */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    white-space: nowrap;  /* Prevents text breaking */
+}
+
+.nav-links a:hover {
+    color: #ff6347;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('DAL_LAKE.jpg') center/cover no-repeat;
+    color: #0c0c0c;
+    text-align: center;
+    padding: 0 2rem;
+    animation: fadeIn 1.5s ease-in;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    animation: slideInFromLeft 1s ease-out;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    animation: slideInFromRight 1s ease-out;
+}
+
+.discover-more {
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #ff6347;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: slideUp 1s ease-out;
+}
+
+.discover-more:hover {
+    transform: scale(1.09) rotate(-6deg);
+    background-color: #333;
+}
+/* Media Queries for Responsiveness */
+
+/* For larger screens (1024px and above) */
+@media (min-width: 1024px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero p {
+        font-size: 1.6rem;
+    }
+
+    .discover-more {
+        font-size: 1.3rem;
+        padding: 1rem 2.5rem;
+    }
+}
+
+/* For screens between 768px and 1024px */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .hero {
+        padding: 0 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero p {
+        font-size: 1.4rem;
+    }
+
+    .discover-more {
+        font-size: 1.2rem;
+        padding: 0.8rem 2rem;
+    }
+}
+
+/* For screens between 480px and 768px */
+@media (max-width: 768px) and (min-width: 480px) {
+    .hero {
+        padding: 0 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+    }
+
+    .discover-more {
+        font-size: 1.1rem;
+        padding: 0.7rem 1.8rem;
+    }
+}
+
+/* For screens below 480px */
+@media (max-width: 480px) {
+    .hero {
+        padding: 0 0.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .discover-more {
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem;
+    }
+}
+/* Additional Content Section */
+.additional-content {
+    display: none;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    max-width: 1000px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.767);
+    perspective: 1000px; /* Used for 3D flip effect */
+    transition: transform 0.9s ease-out, opacity 0.6s ease-in;
+}
+
+/* Flip Card Effect */
+.additional-content.active {
+    display: block;
+    opacity: 1;
+    transform: rotateY(360deg); /* 3D rotation */
+    animation: blurEffect 1s ease forwards;
+}
+
+/* Blur Effect */
+@keyframes blurEffect {
+    from {
+        filter: blur(10px);
+    }
+    to {
+        filter: blur(0);
+    }
+}
+
+/* Heading and Paragraph Styling */
+.additional-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.additional-content p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+
+/* For 1024px and above */
+@media (min-width: 1024px) {
+    .additional-content h2 {
+        font-size: 2.5rem;
+    }
+    .additional-content p {
+        font-size: 1.3rem;
+    }
+}
+
+/* For 768px and below */
+@media (max-width: 768px) {
+    .additional-content h2 {
+        font-size: 2rem;
+    }
+    .additional-content p {
+        font-size: 1.1rem;
+    }
+}
+
+/* For 480px and below */
+@media (max-width: 480px) {
+    .additional-content {
+        padding: 1.5rem;
+    }
+    .additional-content h2 {
+        font-size: 1.8rem;
+    }
+    .additional-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Section Animations */
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-in-out;
+}
+
+/* Trigger animation on scroll */
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Section Styling */
+.boulevard-road,
+.shopping-srinagar,
+.local-eating-places,
+.dal-lake-activities {
+    padding: 5rem 2rem;
+    background-color: #f4f4f4;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease-in;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 1s ease-in;
+}
+
+/* Responsive Headings and Paragraphs */
+@media (max-width: 1024px) {
+    h2 {
+        font-size: 2.2rem;
+    }
+    p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Card Styling */
+.eat-card, .shopping-card, .activity-card, .eating-card {
+    background-color: #fff;
+    padding: 2rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-in;
+}
+
+/* Differentiated Hover Effects */
+.eat-card:hover {
+    transform: translateY(-10px) rotate(1deg);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+    background-color: #ffe0b2;
+}
+
+.shopping-card:hover {
+    transform: scale(1.09);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+    background-color: #d1e8e2;
+}
+
+.activity-card:hover {
+    transform: translateX(10px);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+    background-color: #ffc3f7;
+}
+
+.eating-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+    background-color: #c01212;
+}
+
+/* Responsive Cards */
+@media (max-width: 1024px) {
+    .eat-card, .shopping-card, .activity-card, .eating-card {
+        padding: 1.8rem;
+        margin: 0.8rem 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .eat-card, .shopping-card, .activity-card, .eating-card {
+        padding: 1.5rem;
+        margin: 0.6rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .eat-card, .shopping-card, .activity-card, .eating-card {
+        padding: 1.2rem;
+        margin: 0.5rem 0;
+    }
+}
+
+/* Cards Layout Adjustments */
+.eat-cards, .shopping-places, .activities-cards, .eating-cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.eat-card, .shopping-card, .activity-card, .eating-card {
+    flex: 1 1 calc(33.333% - 2rem);
+}
+
+@media (max-width: 1024px) {
+    .eat-card, .shopping-card, .activity-card, .eating-card {
+        flex: 1 1 calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .eat-card, .shopping-card, .activity-card, .eating-card {
+        flex: 1 1 100%;
+    }
+}
+
+/* Section Specific Styling */
+.boulevard-road {
+    background-color: #f9f9f9;
+}
+
+.shopping-srinagar {
+    background-color: #f0f0f0;
+}
+
+.local-eating-places {
+    background-color: #fafafa;
+}
+
+.dal-lake-activities {
+    background-color: #f5f5f5;
+}
+
+/* Animation for Cards */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mughal Gardens Section */
+.mughal-gardens {
+    padding: 5rem 2rem;
+    background-color: #f4f4f4;
+}
+
+/* Garden Section Styling */
+.garden-section {
+    
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.garden-section h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.garden-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Image Carousel */
+.image-carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.image-carousel {
+    display: flex;
+    gap: 1rem;
+    justify-content: center; /* Center the carousel content */
+    transition: transform 0.5s ease-in-out;
+    width: fit-content; /* Adjust the width based on content */
+    touch-action: pan-x;
+}
+
+.image-carousel img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    opacity: 0.5;
+}
+
+/* Focused Image Styling */
+.image-carousel img.focused {
+    opacity: 1;
+    transform: scale(1.7); /* Scale up the focused image */
+    filter: blur(0px);
+    border-radius: 5px;
+    
+}
+
+/* Blurred Images */
+.image-carousel img:not(.focused) {
+    filter: blur(7px);
+    transform: scale(0.9); /* Slightly scale down non-focused images */
+}
+
+/* Carousel Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.863);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 10;
+}
+
+.left-btn {
+    left: 10px;
+}
+
+.right-btn {
+    right: 10px;
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+    .garden-section h3 {
+        font-size: 1.8rem;
+    }
+    
+    .garden-section p {
+        font-size: 1.1rem;
+    }
+    
+    .image-carousel img {
+        max-width: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .garden-section h3 {
+        font-size: 1.5rem;
+    }
+    
+    .garden-section p {
+        font-size: 1rem;
+    }
+
+    .image-carousel img {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .garden-section h3 {
+        font-size: 1.3rem;
+    }
+    
+    .garden-section p {
+        font-size: 0.9rem;
+    }
+
+    .image-carousel img {
+        max-width: 120px;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: gold;
+    padding: 2rem 0;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in;
+}
+/* Footer */
+footer {
+    background-color: #333;
+    color: gold;
+    padding: 2rem 0;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in;
+}
+
+/* General footer styles for larger screens */
+@media (min-width: 769px) {
+    footer {
+        padding: 2rem 0;
+    }
+
+    .footer-copyright {
+        font-size: 1.2rem;
+    }
+}
+
+/* Styles for medium screens (up to 768px) */
+@media (max-width: 768px) {
+    footer {
+        padding: 1.5rem 0;
+    }
+
+    .footer-copyright {
+        font-size: 1rem;
+    }
+}
+
+/* Styles for small screens (up to 480px and below) */
+@media (max-width: 480px) {
+    footer {
+        padding: 1rem 0;
+    }
+
+    .footer-copyright {
+        font-size: 0.9rem;
+        padding: 0 1rem; /* Adds padding to avoid text touching the sides */
+    }
+}
+
+
+
+/* Animations */
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    background-color: #ff0000; /* Background color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding */
+    font-size: 22px; /* Font size */
+    cursor: pointer; /* Cursor style */
+    display: none; /* Initially hidden */
+    z-index: 1000; /* On top of other elements */
+    transition: background-color 0.4s ease; /* Smooth transition */
+}
+
+/* Responsive Font Size and Positioning */
+@media (max-width: 1024px) {
+    .back-to-top {
+        bottom: 15px; /* Adjust position */
+        right: 15px; /* Adjust position */
+    }
+}
+
+@media (max-width: 768px) {
+    .back-to-top {
+        font-size: 16px; /* Smaller font size for smaller screens */
+        padding: 8px 12px; /* Reduced padding */
+        bottom: 10px; /* Adjust position */
+        right: 10px; /* Adjust position */
+    }
+}
+
+@media (max-width: 480px) {
+    .back-to-top {
+        font-size: 14px; /* Smaller font size for mobile screens */
+        padding: 6px 10px; /* Reduced padding */
+        bottom: 5px; /* Adjust position */
+        right: 5px; /* Adjust position */
+    }
+}
+
+.back-to-top:hover {
+    background-color: #0934f5; /* Darker background on hover */
+    transform: scale(1.2);
+}

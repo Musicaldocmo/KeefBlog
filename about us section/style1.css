@@ -1,0 +1,600 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Navbar */
+.navbar {
+  background-color: #333;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h1 {
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover,
+.active-link {
+  color: #ffa500;
+}
+
+/* About Section */
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem;
+  background-color: #f5f5f5;
+  flex-wrap: wrap;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.about-content {
+  max-width: 50%;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+/* Why Choose Us Section */
+.why-choose-us {
+  padding: 50px 0;
+  background-color: #f5f5f5;
+}
+
+.why-choose-us .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.reason {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.reason:hover {
+  transform: translateY(-10px);
+}
+
+.reason i {
+  font-size: 3rem;
+  color: #ff6b6b;
+  margin-bottom: 15px;
+}
+
+.reason h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.reason p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Responsive Design for larger screens */
+@media (min-width: 1024px) {
+  .reasons-grid {
+      grid-template-columns: repeat(4, 1fr);
+  }
+
+  .section-title {
+      font-size: 3rem;
+  }
+
+  .reason i {
+      font-size: 3.5rem;
+  }
+
+  .reason h3 {
+      font-size: 1.75rem;
+  }
+
+  .reason p {
+      font-size: 1.1rem;
+  }
+}
+
+/* Responsive Design for tablets */
+@media (max-width: 1024px) {
+  .reasons-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-title {
+      font-size: 2.5rem;
+  }
+
+  .reason i {
+      font-size: 3rem;
+  }
+
+  .reason h3 {
+      font-size: 1.5rem;
+  }
+
+  .reason p {
+      font-size: 1rem;
+  }
+}
+
+/* Responsive Design for mobile screens (below 768px) */
+@media (max-width: 768px) {
+  .reasons-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .section-title {
+      font-size: 2rem;
+  }
+
+  .reason i {
+      font-size: 2.5rem;
+  }
+
+  .reason h3 {
+      font-size: 1.3rem;
+  }
+
+  .reason p {
+      font-size: 0.9rem;
+  }
+}
+
+/* Responsive Design for smaller mobile screens (below 480px) */
+@media (max-width: 480px) {
+  .why-choose-us {
+      padding: 30px 10px;
+  }
+
+  .section-title {
+      font-size: 1.8rem;
+  }
+
+  .reason {
+      padding: 15px;
+  }
+
+  .reason i {
+      font-size: 2rem;
+  }
+
+  .reason h3 {
+      font-size: 1.2rem;
+  }
+
+  .reason p {
+      font-size: 0.85rem;
+  }
+}
+
+/* Mission Section */
+.mission-section,
+.team-section,
+.map-section {
+  padding: 3rem 4rem;
+  text-align: center;
+  background-color: #fff;
+  animation: slideIn 2.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.mission-section h2,
+.team-section h2,
+.map-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.mission-section p,
+.team-section p,
+.map-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: justify;
+  margin: 0 auto;
+  max-width: 80%;
+}
+
+/* Team Cards - Flip Card */
+.team-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  perspective: 1000px; /* Allows 3D effect */
+}
+
+.team-card {
+  width: 250px;
+  height: 300px;
+  margin: 1rem;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease; /* Slower transition for better flip */
+  cursor: pointer;
+}
+
+.team-card:hover {
+  transform: rotateY(180deg);
+}
+
+.team-card .team-card-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.team-card-front,
+.team-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Prevents text flip */
+}
+
+.team-card-front {
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.team-card-back {
+  background-color: rgba(255, 255, 255, 0.2); /* Glassmorphism */
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(180deg);
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.team-card img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+}
+
+.team-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.team-card p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+
+/* Map Section */
+.map-section {
+  background-color: #f5f5f5;
+  padding: 4rem 2rem;
+}
+
+.map-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.map-container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  animation: mapFadeIn 3.5s ease-in-out;
+}
+
+@keyframes mapFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive iframe with hover scale effect */
+iframe {
+
+  box-shadow: 30px 40px 20px rgba(0, 0, 0, 0.336);
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+
+iframe:hover {
+  transform: scale(1.07);
+}
+
+/* Initially visible map info */
+.map-info {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 10px;
+  opacity: 1; /* Visible initially */
+  transition: opacity 0.5s ease, visibility 2.5s ease; /* Smooth transitions */
+  visibility: visible; /* Ensures it's visible initially */
+  z-index: 1; /* Ensure it's above the map */
+}
+
+/* Hide map info when hovering over iframe */
+.map-container:hover .map-info {
+  opacity: 0; /* Hide map info */
+  visibility: hidden; /* Fully hidden */
+  pointer-events: none; /* Disable interaction with hidden map info */
+}
+
+/* Show map info when not hovering over iframe */
+.map-container .map-info {
+  opacity: 1; /* Visible when not hovered */
+  visibility: visible; /* Ensures it shows when not hovered */
+}
+
+/* Map info text styling */
+.map-info p {
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+}
+
+.footer button {
+  background-color: #ffa500;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.footer button:hover {
+  background-color: #333;
+  transform: scale(1.07);
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #ffa600e7;
+  color: #fff;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.back-to-top:hover {
+  background-color: #ff4500;
+  transform: scale(1.07);
+}
+
+/* Responsive Design */
+
+/* Screens between 1024px and 768px */
+@media (max-width: 1024px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .team-cards {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+/* Screens below 768px */
+@media (max-width: 768px) {
+  .about-section,
+  .mission-section,
+  .team-section,
+  .map-section {
+    padding: 2rem;
+  }
+
+  .about-content,
+  .about-image {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-card {
+    width: 200px;
+    height: 260px;
+  }
+
+  .team-card img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .team-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .team-card p {
+    font-size: 0.9rem;
+  }
+
+  .map-container {
+    max-width: 100%;
+    height: 300px;
+  }
+}
+
+/* Screens below 480px */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 1rem;
+    flex-direction: column;
+  }
+
+  .navbar h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-section,
+  .team-section,
+  .map-section {
+    padding: 1rem;
+  }
+
+  .team-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-card {
+    width: 180px;
+    height: 240px;
+  }
+
+  .team-card img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .team-card h3 {
+    font-size: 1rem;
+  }
+
+  .team-card p {
+    font-size: 0.8rem;
+  }
+.map-section{
+  margin-bottom: 3rem;
+}
+  .map-container {
+    max-width: 100%;
+    height: 250px;
+  }
+}
